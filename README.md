@@ -27,7 +27,7 @@ A modern web browser (Chrome, Firefox, Safari, or Edge).
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/consulting-website.git
+   git clone https://github.com/sandor-kantor/consulting-website.git
    ```
 2. Navigate to the project directory:
    ```bash
