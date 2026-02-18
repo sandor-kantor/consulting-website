@@ -161,6 +161,65 @@ body {
 }
 
 /* ============================================================
+   Publications Section
+   ============================================================ */
+
+#publications {
+  background-color: #f8f9fa;
+}
+
+.publications-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.publication-item {
+  display: flex;
+  gap: 24px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 28px;
+  border: 1px solid #e5e7eb;
+}
+
+.publication-year {
+  flex: 0 0 60px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a73e8;
+  padding-top: 2px;
+}
+
+.publication-details {
+  flex: 1;
+}
+
+.publication-title {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0a2540;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.publication-authors {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.publication-journal {
+  font-size: 14px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* ============================================================
    Navbar
    ============================================================ */
 
