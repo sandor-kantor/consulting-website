@@ -475,3 +475,59 @@ footer {
   }
 
 }
+
+/* ============================================================
+   Responsive — max-width 480px
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+  .section-container {
+    padding: 60px 16px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  #hero {
+    padding: 60px 16px 48px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-tagline {
+    font-size: 16px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-item {
+    padding: 20px;
+  }
+
+  .about-highlights {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .highlight-item {
+    flex-basis: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-links ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+}
