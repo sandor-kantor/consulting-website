@@ -31,19 +31,21 @@ document.addEventListener('DOMContentLoaded', function () {
   const navbar = document.querySelector('.navbar');
   let ticking = false;
 
-  window.addEventListener('scroll', function () {
-    if (!ticking) {
-      requestAnimationFrame(function () {
-        if (window.scrollY > 50) {
-          navbar.classList.add('navbar-scrolled');
-        } else {
-          navbar.classList.remove('navbar-scrolled');
-        }
-        ticking = false;
-      });
-      ticking = true;
-    }
-  });
+  if (navbar) {
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        requestAnimationFrame(function () {
+          if (window.scrollY > 50) {
+            navbar.classList.add('navbar-scrolled');
+          } else {
+            navbar.classList.remove('navbar-scrolled');
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
 
   // Active nav link highlighting via Intersection Observer
   const sections = document.querySelectorAll('section[id]');
