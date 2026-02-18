@@ -1,0 +1,92 @@
+/* ============================================================
+   Base Reset
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #333333;
+  background: #ffffff;
+  padding-top: 72px;
+}
+
+/* ============================================================
+   Navbar
+   ============================================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+
+.nav-logo {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #0a2540;
+  text-decoration: none;
+}
+
+.nav-logo:hover {
+  color: #1a73e8;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+  color: #1a73e8;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.hamburger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #0a2540;
+  margin: 5px 0;
+  transition: 0.3s ease;
+}
