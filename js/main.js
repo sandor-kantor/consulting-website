@@ -23,4 +23,30 @@ document.addEventListener('DOMContentLoaded', function () {
       navToggle.setAttribute('aria-expanded', 'false');
     }
   });
+
+  // Active nav link highlighting via Intersection Observer
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = navMenu.querySelectorAll('a[href^="#"]');
+
+  function setActiveLink(id) {
+    navLinks.forEach(function (link) {
+      if (link.getAttribute('href') === '#' + id) {
+        link.classList.add('active-link');
+      } else {
+        link.classList.remove('active-link');
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        setActiveLink(entry.target.id);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(function (section) {
+    observer.observe(section);
+  });
 });

@@ -361,6 +361,11 @@ footer {
   color: #1a73e8;
 }
 
+.nav-menu a.active-link {
+  color: #1a73e8;
+  font-weight: 600;
+}
+
 .nav-toggle {
   display: none;
 }
