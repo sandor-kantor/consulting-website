@@ -105,6 +105,62 @@ body {
 }
 
 /* ============================================================
+   Services Section
+   ============================================================ */
+
+#services {
+  background-color: #ffffff;
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: -32px auto 48px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.service-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 32px 28px;
+  transition: all 0.2s ease;
+}
+
+.service-card:hover {
+  border-color: #1a73e8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.service-icon {
+  color: #1a73e8;
+  margin-bottom: 20px;
+}
+
+.service-name {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0a2540;
+  margin-bottom: 12px;
+}
+
+.service-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* ============================================================
    Navbar
    ============================================================ */
 
