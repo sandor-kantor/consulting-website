@@ -39,7 +39,7 @@ body {
 
 .skip-link {
   position: absolute;
-  top: -100%;
+  top: 0;
   left: 16px;
   z-index: 9999;
   padding: 10px 16px;
@@ -50,11 +50,12 @@ body {
   font-weight: 600;
   text-decoration: none;
   border-radius: 0 0 6px 6px;
-  transition: top 0.2s ease;
+  transform: translateY(-110%);
+  transition: transform 0.2s ease;
 }
 
 .skip-link:focus {
-  top: 0;
+  transform: translateY(0);
 }
 
 /* Focus-visible styles — keyboard-only, no mouse outline */
@@ -192,7 +193,7 @@ button:focus-visible,
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   padding: 32px 28px;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .service-card:hover {
@@ -243,7 +244,6 @@ button:focus-visible,
   border-radius: 8px;
   padding: 28px;
   border: 1px solid #e5e7eb;
-  transition: border-color 0.2s ease;
 }
 
 .publication-item:hover {
@@ -362,7 +362,6 @@ footer {
   color: #94a3b8;
   text-decoration: none;
   font-size: 14px;
-  transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
@@ -419,7 +418,6 @@ footer {
   font-size: 15px;
   color: #4b5563;
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 
 .nav-menu a:hover {
@@ -441,7 +439,7 @@ footer {
   height: 2px;
   background-color: #0a2540;
   margin: 5px 0;
-  transition: 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .nav-toggle.active .hamburger-line:nth-child(1) {
@@ -614,6 +612,84 @@ footer {
   .footer-links ul {
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+}
+
+/* ============================================================
+   Print Stylesheet
+   ============================================================ */
+
+@media print {
+
+  /* Hide interactive / screen-only elements */
+  .navbar,
+  footer,
+  #contact,
+  .skip-link {
+    display: none !important;
+  }
+
+  /* Remove paddings added to account for fixed navbar */
+  body {
+    padding-top: 0;
+    color: #000000;
+    background: #ffffff;
+  }
+
+  /* Strip section backgrounds so ink isn't wasted */
+  #about,
+  #publications,
+  .publication-item,
+  .service-card {
+    background: #ffffff !important;
+  }
+
+  /* Flatten layout — services as a single-column list */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Ensure text is fully black for legibility */
+  .section-title,
+  .service-name,
+  .publication-title,
+  .about-text p,
+  .highlight-number {
+    color: #000000;
+  }
+
+  /* Remove box shadows and borders that look odd on paper */
+  .service-card,
+  .publication-item {
+    border: 1px solid #cccccc;
+    box-shadow: none;
+  }
+
+  /* Prevent elements from splitting across page breaks */
+  .service-card,
+  .publication-item,
+  .about-content {
+    break-inside: avoid;
+  }
+
+  /* Show href for links */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 12px;
+    color: #444444;
+  }
+
+  /* But not for anchor links — they're internal and useless on paper */
+  a[href^="#"]::after {
+    content: "";
+  }
+
+  /* Disable animations */
+  .animate-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
   }
 
 }
