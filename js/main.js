@@ -49,4 +49,25 @@ document.addEventListener('DOMContentLoaded', function () {
   sections.forEach(function (section) {
     observer.observe(section);
   });
+
+  // Scroll fade-in animations
+  const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+  // Apply stagger delay to service cards
+  document.querySelectorAll('.services-grid .animate-on-scroll').forEach(function (card, index) {
+    card.style.transitionDelay = (index * 100) + 'ms';
+  });
+
+  const animationObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        animationObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  animatedElements.forEach(function (el) {
+    animationObserver.observe(el);
+  });
 });
