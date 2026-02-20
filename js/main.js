@@ -118,4 +118,45 @@ document.addEventListener('DOMContentLoaded', function () {
   animatedElements.forEach(function (el) {
     animationObserver.observe(el);
   });
+
+  // Service card modals
+  var openModal = null;
+
+  function showModal(id) {
+    var overlay = document.getElementById(id);
+    if (!overlay) return;
+    overlay.removeAttribute('hidden');
+    openModal = overlay;
+    document.body.style.overflow = 'hidden';
+    var closeBtn = overlay.querySelector('.modal-close');
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function hideModal() {
+    if (!openModal) return;
+    openModal.setAttribute('hidden', '');
+    document.body.style.overflow = '';
+    if (openModal._opener) openModal._opener.focus();
+    openModal = null;
+  }
+
+  document.querySelectorAll('.service-learn-more').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var id = btn.getAttribute('data-modal');
+      var overlay = document.getElementById(id);
+      if (overlay) overlay._opener = btn;
+      showModal(id);
+    });
+  });
+
+  document.querySelectorAll('.modal-overlay').forEach(function (overlay) {
+    overlay.querySelector('.modal-close').addEventListener('click', hideModal);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) hideModal();
+    });
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && openModal) hideModal();
+  });
 });
