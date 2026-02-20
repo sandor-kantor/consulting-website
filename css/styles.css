@@ -166,6 +166,63 @@ button:focus-visible,
 }
 
 /* ============================================================
+   Therapeutic Areas Banner
+   ============================================================ */
+
+#therapeutic-areas {
+  background: #0a2540;
+  padding: 28px 24px;
+}
+
+.ta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.ta-label {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #4ecdc4;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin: 0;
+  padding-right: 28px;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.ta-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ta-badge {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: 6px 16px;
+  white-space: nowrap;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.ta-badge:hover {
+  background: rgba(78, 205, 196, 0.14);
+  border-color: rgba(78, 205, 196, 0.45);
+  color: #ffffff;
+}
+
+/* ============================================================
    Services Section
    ============================================================ */
 
@@ -1228,6 +1285,21 @@ footer {
     flex-basis: calc(50% - 8px);
   }
 
+  /* Therapeutic areas banner */
+  .ta-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .ta-label {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding-bottom: 14px;
+    width: 100%;
+  }
+
   /* Services */
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1318,6 +1390,7 @@ footer {
   .navbar,
   footer,
   #contact,
+  #therapeutic-areas,
   .skip-link {
     display: none !important;
   }
