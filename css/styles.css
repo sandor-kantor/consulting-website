@@ -1032,6 +1032,16 @@ footer {
   color: #ffffff;
 }
 
+.footer-legal {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.24);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
 /* ============================================================
    Navbar
    ============================================================ */

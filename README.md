@@ -50,6 +50,8 @@ A modern web browser (Chrome, Firefox, Safari, or Edge).
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
+The source code of this project is licensed under the MIT License. Website content (text, images, and media) is © 2025 Sandor Kantor and may not be reproduced without permission.
+
 ## Contact
 
 For consulting enquiries, please reach out via [LinkedIn](https://www.linkedin.com/in/sandorkantor/) or sandor.kantor.consulting@gmail.com.
