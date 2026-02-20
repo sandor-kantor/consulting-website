@@ -69,14 +69,19 @@
 
       <!-- Hero content -->
       <div class="hero-content-wrapper">
-        <div class="hero-content">
-          <p class="hero-eyebrow">Sandor Kantor, PhD</p>
-          <h1 class="hero-title">Electrophysiology<br>Consulting<br>Services</h1>
-          <p class="hero-tagline">Your Translational EEG Partner for CNS Drug Development</p>
-          <p class="hero-description">Bridging preclinical and clinical development with 20+ years of expertise in neurophysiological biomarkers, pharmaco-EEG, and CNS drug discovery.</p>
-          <div class="hero-buttons">
-            <a href="#services" class="btn btn-primary">View Services</a>
-            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        <div class="hero-layout">
+          <div class="hero-content">
+            <p class="hero-eyebrow">Sandor Kantor, PhD</p>
+            <h1 class="hero-title">Electrophysiology<br>Consulting<br>Services</h1>
+            <p class="hero-tagline">Your Translational EEG Partner for CNS Drug Development</p>
+            <p class="hero-description">Bridging preclinical and clinical development with 20+ years of expertise in neurophysiological biomarkers, pharmaco-EEG, and CNS drug discovery.</p>
+            <div class="hero-buttons">
+              <a href="#services" class="btn btn-primary">View Services</a>
+              <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+          </div>
+          <div class="hero-photo">
+            <img src="assets/images/hero-headshot.jpg" alt="Sandor Kantor, PhD — Founder of PharmaBrAIn, translational neuroscientist and EEG specialist" />
           </div>
         </div>
       </div>
@@ -232,13 +237,7 @@
         <div class="case-studies-grid">
 
           <div class="case-study-card case-study-card--teal animate-on-scroll">
-            <!-- Add psilocybin-sleep-wake-figure.jpg here -->
-            <div class="case-study-figure" aria-hidden="true">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" />
-              </svg>
-              <span>Figure placeholder</span>
-            </div>
+            <!-- IMAGE: Pending IP clearance — add casestudy-psilocybin-sleep.jpg here when approved -->
             <div class="case-study-content">
               <h3 class="case-study-title">Sleep-Wake Profiling Study</h3>
               <p class="case-study-subtitle">24-h wireless EEG/EMG recording in WKY rats after psilocybin</p>
@@ -253,13 +252,7 @@
           </div>
 
           <div class="case-study-card case-study-card--blue animate-on-scroll">
-            <!-- Add mmn-ketamine-figure.jpg here -->
-            <div class="case-study-figure" aria-hidden="true">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" />
-              </svg>
-              <span>Figure placeholder</span>
-            </div>
+            <!-- IMAGE: Pending IP clearance — add casestudy-mmn-ketamine.jpg here when approved -->
             <div class="case-study-content">
               <h3 class="case-study-title">Mismatch Negativity (MMN) Study</h3>
               <p class="case-study-subtitle">Pre-attentive auditory information processing after ketamine</p>
@@ -419,12 +412,18 @@
           <div class="modal-section">
             <p>Staff training and technical workshops available on request.</p>
           </div>
-          <!-- Add telemetry-setup.jpg here -->
-          <div class="modal-image-placeholder" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" />
-            </svg>
-            <span>Image: telemetry-setup.jpg</span>
+          <!-- IMAGE: Pending IP clearance — add telemetry-setup.jpg here when approved -->
+          <div class="modal-section">
+            <div class="modal-img-grid">
+              <figure>
+                <img class="modal-img" src="assets/images/hypnograms-wt-atx3.jpg" alt="24-hour EEG hypnograms comparing sleep-wake architecture in wild-type versus Ataxin-3 transgenic rats" />
+                <figcaption class="modal-img-caption">24-h hypnograms: WT vs. Atx-3 rats — DSI PhysioTel telemetry</figcaption>
+              </figure>
+              <figure>
+                <img class="modal-img" src="assets/images/electrode-surgery.jpg" alt="Aseptic epidural EEG electrode placement surgery in a rodent model using stereotaxic equipment" />
+                <figcaption class="modal-img-caption">Epidural electrode placement — fully aseptic surgical technique</figcaption>
+              </figure>
+            </div>
           </div>
         </div>
       </div>
@@ -466,6 +465,12 @@
               <li>Behavioural assessment in rodents</li>
             </ul>
           </div>
+          <div class="modal-section">
+            <figure style="margin:0">
+              <img class="modal-img" src="assets/images/icon-pharmaco-eeg.jpg" alt="Pharmaco-EEG study overview showing electrode placement, EEG frequency band decomposition, and dose-response analysis" />
+              <figcaption class="modal-img-caption">Representative pharmaco-EEG study workflow — from electrode placement to spectral analysis</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </div>
@@ -506,12 +511,12 @@
               <li>Python — SciPy, NumPy, Pandas, Matplotlib</li>
             </ul>
           </div>
-          <!-- Add data-analysis-screenshot.jpg here -->
-          <div class="modal-image-placeholder" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" />
-            </svg>
-            <span>Image: data-analysis-screenshot.jpg</span>
+          <!-- IMAGE: Pending IP clearance — add data-analysis-screenshot.jpg here when approved -->
+          <div class="modal-section">
+            <figure style="margin:0">
+              <img class="modal-img" src="assets/images/brain-journal-cover.jpg" alt="Brain journal cover — Oxford University Press, one of the leading peer-reviewed neuroscience journals" />
+              <figcaption class="modal-img-caption">Findings published in <em>Brain</em> (Oxford University Press) — one of neuroscience's premier journals</figcaption>
+            </figure>
           </div>
           <div class="modal-pubs-footer">
             Key publications: Kantor S et al. <em>Behav. Brain Res.</em> 449, 114473 (2023) &nbsp;·&nbsp; <em>Sleep</em> 36, 1129–38 (2013) &nbsp;·&nbsp; <em>Sleep</em> 32, 1127–34 (2009) &nbsp;·&nbsp; <em>Brain</em> 136, 2147–58 (2013)
@@ -535,6 +540,12 @@
         <h2 class="modal-title" id="modal-translational-title">Translational Biomarker Strategy</h2>
         <div class="modal-body">
           <p class="modal-opening">Changes in rodent sleep, EEG, and event-related potentials (ERP) directly mirror human responses to CNS-active compounds. This translational consistency makes EEG a powerful pharmacodynamic tool that enables quantitative, cross-species validation.</p>
+          <div class="modal-section">
+            <figure style="margin:0 0 4px">
+              <img class="modal-img" src="assets/images/translational-eeg-species.jpg" alt="Cross-species EEG translational framework illustrating equivalent sleep and EEG biomarkers from mouse through rat, dog, non-human primate, and human" />
+              <figcaption class="modal-img-caption">EEG biomarkers conserved across species — the basis of translational pharmacodynamics</figcaption>
+            </figure>
+          </div>
           <div class="modal-section">
             <h3 class="modal-section-title">EEG Enables Critical Decision-Making</h3>
             <ul>
@@ -563,6 +574,12 @@
               </ul>
             </div>
           </div>
+          <div class="modal-section">
+            <figure style="margin:0">
+              <img class="modal-img" src="assets/images/icon-translational.jpg" alt="Translational biomarker strategy diagram — preclinical EEG endpoints mapped to clinical trial outcomes" />
+              <figcaption class="modal-img-caption">Preclinical-to-clinical EEG biomarker bridging strategy</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </div>
@@ -586,6 +603,7 @@
         <div class="modal-body">
           <div class="modal-sub-cards">
             <div class="modal-sub-card modal-sub-card--sleep">
+              <img class="modal-sub-card-img" src="assets/images/icon-sleep-circadian.jpg" alt="Hypnogram showing sleep-wake cycle architecture — NREM, REM, and wakefulness across 24 hours" />
               <h3 class="modal-sub-card-title">Sleep &amp; Circadian Disorders</h3>
               <ul>
                 <li>Circadian rhythm assessment</li>
@@ -595,6 +613,7 @@
               </ul>
             </div>
             <div class="modal-sub-card modal-sub-card--neuropsych">
+              <img class="modal-sub-card-img" src="assets/images/icon-neuropsychiatric.jpg" alt="EEG mismatch negativity (MMN) waveform — auditory oddball paradigm for schizophrenia and psychiatric drug assessment" />
               <h3 class="modal-sub-card-title">Neuropsychiatric Models</h3>
               <ul>
                 <li>Abnormal sleep-wake pattern characterisation</li>
@@ -604,6 +623,7 @@
               </ul>
             </div>
             <div class="modal-sub-card modal-sub-card--psychedelic">
+              <img class="modal-sub-card-img" src="assets/images/icon-psychedelic.jpg" alt="EEG gamma power spectrogram showing enhanced high-frequency oscillations following psychedelic compound administration" />
               <h3 class="modal-sub-card-title">Psychedelic Research</h3>
               <ul>
                 <li>EEG gamma power enhancement</li>
@@ -614,6 +634,7 @@
               <div class="modal-note">Experience with psilocybin, ibogaine, and other neuroplastogens.</div>
             </div>
             <div class="modal-sub-card modal-sub-card--epilepsy">
+              <img class="modal-sub-card-img" src="assets/images/icon-epilepsy.jpg" alt="EEG recording showing interictal spike detection and seizure quantification in a rodent epilepsy model" />
               <h3 class="modal-sub-card-title">Epilepsy &amp; Seizure Models</h3>
               <ul>
                 <li>Seizure detection and quantification</li>
@@ -655,6 +676,12 @@
           </div>
           <div class="modal-bg-card">
             20+ peer-reviewed publications in high-impact journals including <em>Brain</em>, <em>Sleep</em>, and <em>Neurotherapeutics</em>.
+          </div>
+          <div class="modal-section">
+            <figure style="margin:0">
+              <img class="modal-img" src="assets/images/recording-lab-setup.jpg" alt="Neurophysiology recording laboratory showing telemetry receiver arrays, monitoring workstations, and signal acquisition hardware" />
+              <figcaption class="modal-img-caption">State-of-the-art neurophysiology recording facility — telemetry and EEG acquisition infrastructure</figcaption>
+            </figure>
           </div>
         </div>
       </div>
