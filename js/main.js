@@ -106,6 +106,16 @@ document.addEventListener('DOMContentLoaded', function () {
     card.style.transitionDelay = (index * 100) + 'ms';
   });
 
+  // Apply stagger delay to case study cards
+  document.querySelectorAll('.case-studies-grid .animate-on-scroll').forEach(function (card, index) {
+    card.style.transitionDelay = (index * 150) + 'ms';
+  });
+
+  // Apply stagger delay to publication items
+  document.querySelectorAll('.publications-list .animate-on-scroll').forEach(function (item, index) {
+    item.style.transitionDelay = (index * 80) + 'ms';
+  });
+
   const animationObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {

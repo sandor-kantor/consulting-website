@@ -79,11 +79,22 @@ button:focus-visible,
 
 .section-title {
   font-family: "Inter", sans-serif;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
   color: #0a2540;
-  margin-bottom: 48px;
+  margin-bottom: 0;
   text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 3px;
+  background: #1a73e8;
+  border-radius: 2px;
+  margin: 14px auto 48px;
 }
 
 /* ============================================================
@@ -233,7 +244,7 @@ button:focus-visible,
 .section-subtitle {
   text-align: center;
   max-width: 700px;
-  margin: -32px auto 48px;
+  margin: -36px auto 48px;
   font-size: 17px;
   line-height: 1.7;
   color: #4b5563;
@@ -776,7 +787,7 @@ button:focus-visible,
    ============================================================ */
 
 #publications {
-  background-color: #f8f9fa;
+  background-color: #ffffff;
 }
 
 .publications-list {
@@ -790,14 +801,20 @@ button:focus-visible,
 .publication-item {
   display: flex;
   gap: 24px;
-  background: #ffffff;
+  background: #f8f9fa;
   border-radius: 8px;
   padding: 28px;
   border: 1px solid #e5e7eb;
 }
 
+.publication-item {
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
 .publication-item:hover {
   border-color: #1a73e8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
 .publication-year {
@@ -839,7 +856,7 @@ button:focus-visible,
    ============================================================ */
 
 #contact {
-  background-color: #ffffff;
+  background-color: #f8f9fa;
 }
 
 .contact-content {
@@ -881,7 +898,7 @@ button:focus-visible,
 footer {
   background-color: #0a2540;
   color: #ffffff;
-  padding: 32px 24px;
+  padding: 48px 24px 32px;
 }
 
 .footer-container {
@@ -889,18 +906,74 @@ footer {
   margin: 0 auto;
 }
 
-.footer-content {
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 24px;
+}
+
+.footer-logo {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
+}
+
+.footer-logo-ai {
+  color: #4ecdc4;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.48);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.footer-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.58);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.15s ease;
+}
+
+.footer-contact-item svg {
+  flex-shrink: 0;
+}
+
+.footer-contact-item:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .footer-copyright {
-  font-size: 14px;
-  color: #94a3b8;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.32);
+  margin: 0;
 }
 
-.footer-links ul {
+.footer-nav ul {
   list-style: none;
   display: flex;
   gap: 24px;
@@ -908,13 +981,14 @@ footer {
   padding: 0;
 }
 
-.footer-links a {
-  color: #94a3b8;
+.footer-nav a {
+  color: rgba(255, 255, 255, 0.42);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
+  transition: color 0.15s ease;
 }
 
-.footer-links a:hover {
+.footer-nav a:hover {
   color: #ffffff;
 }
 
@@ -1322,6 +1396,28 @@ footer {
     flex: 0 0 auto;
   }
 
+  /* Footer */
+  .footer-top {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .footer-contact-list {
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
 }
 
 /* ============================================================
@@ -1335,7 +1431,7 @@ footer {
   }
 
   .section-title {
-    font-size: 26px;
+    font-size: 28px;
   }
 
   .hero-content-wrapper {
@@ -1365,17 +1461,6 @@ footer {
 
   .highlight-item {
     flex-basis: 100%;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
-  }
-
-  .footer-links ul {
-    justify-content: center;
-    flex-wrap: wrap;
   }
 
 }
