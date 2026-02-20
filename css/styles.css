@@ -395,13 +395,21 @@ footer {
 .nav-logo {
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 22px;
   color: #0a2540;
   text-decoration: none;
 }
 
-.nav-logo:hover {
+.logo-highlight {
   color: #1a73e8;
+}
+
+.nav-logo:hover {
+  color: #0a2540;
+}
+
+.nav-logo:hover .logo-highlight {
+  color: #1557b0;
 }
 
 .nav-menu {
@@ -456,6 +464,44 @@ footer {
 
 .navbar-scrolled {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================================
+   Hero Section
+   ============================================================ */
+
+#hero {
+  position: relative;
+  overflow: hidden;
+}
+
+#hero .section-container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-bg-decoration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-title .logo-highlight {
+  color: #1a73e8;
+}
+
+.hero-founder {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
 }
 
 /* ============================================================

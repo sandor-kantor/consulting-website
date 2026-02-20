@@ -61,13 +61,38 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Track which sections currently overlap the trigger zone so that
+  // scrolling back up correctly restores the previous active link.
+  const activeSections = new Set();
+
   const observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
-        setActiveLink(entry.target.id);
+        activeSections.add(entry.target.id);
+      } else {
+        activeSections.delete(entry.target.id);
       }
     });
-  }, { threshold: 0.3 });
+
+    // Among all intersecting sections, pick the last one in document order.
+    // This is the furthest-down section whose content is in the trigger zone —
+    // i.e. the section the user has most recently scrolled into.
+    let activeId = null;
+    sections.forEach(function (section) {
+      if (activeSections.has(section.id)) {
+        activeId = section.id;
+      }
+    });
+
+    if (activeId) setActiveLink(activeId);
+  }, {
+    // Shrink the root by the navbar height at the top so content behind the
+    // navbar never triggers. Clip the lower 66% so the trigger zone covers
+    // only the upper third of the visible viewport — this fires reliably even
+    // for sections taller than the viewport.
+    rootMargin: '-72px 0px -66% 0px',
+    threshold: 0
+  });
 
   sections.forEach(function (section) {
     observer.observe(section);
