@@ -49,74 +49,36 @@
     <main id="main-content">
 
     <section id="hero">
-      <!-- Hero Section -->
-      <svg class="hero-bg-decoration" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" aria-hidden="true" focusable="false">
-        <g stroke="#1a73e8" stroke-width="1" fill="none">
-          <line x1="50" y1="80" x2="150" y2="40"/>
-          <line x1="50" y1="80" x2="200" y2="160"/>
-          <line x1="150" y1="40" x2="320" y2="60"/>
-          <line x1="200" y1="160" x2="380" y2="180"/>
-          <line x1="200" y1="160" x2="140" y2="220"/>
-          <line x1="320" y1="60" x2="480" y2="90"/>
-          <line x1="320" y1="60" x2="600" y2="50"/>
-          <line x1="380" y1="180" x2="520" y2="220"/>
-          <line x1="380" y1="180" x2="650" y2="170"/>
-          <line x1="480" y1="90" x2="600" y2="50"/>
-          <line x1="480" y1="90" x2="650" y2="170"/>
-          <line x1="520" y1="220" x2="720" y2="280"/>
-          <line x1="520" y1="220" x2="440" y2="320"/>
-          <line x1="600" y1="50" x2="780" y2="80"/>
-          <line x1="650" y1="170" x2="820" y2="200"/>
-          <line x1="720" y1="280" x2="820" y2="200"/>
-          <line x1="720" y1="280" x2="680" y2="340"/>
-          <line x1="780" y1="80" x2="900" y2="120"/>
-          <line x1="780" y1="80" x2="1020" y2="60"/>
-          <line x1="820" y1="200" x2="940" y2="260"/>
-          <line x1="900" y1="120" x2="1060" y2="180"/>
-          <line x1="940" y1="260" x2="860" y2="340"/>
-          <line x1="1020" y1="60" x2="1140" y2="100"/>
-          <line x1="1060" y1="180" x2="1160" y2="240"/>
-          <line x1="1140" y1="100" x2="1160" y2="240"/>
-          <line x1="1160" y1="240" x2="980" y2="320"/>
-          <line x1="140" y1="220" x2="100" y2="320"/>
-          <line x1="140" y1="220" x2="280" y2="280"/>
-          <line x1="280" y1="280" x2="440" y2="320"/>
-          <line x1="440" y1="320" x2="680" y2="340"/>
-          <line x1="680" y1="340" x2="860" y2="340"/>
-          <line x1="860" y1="340" x2="980" y2="320"/>
-        </g>
-        <g fill="#1a73e8">
-          <circle cx="50" cy="80" r="3"/>
-          <circle cx="150" cy="40" r="3"/>
-          <circle cx="200" cy="160" r="3"/>
-          <circle cx="320" cy="60" r="3"/>
-          <circle cx="380" cy="180" r="3"/>
-          <circle cx="480" cy="90" r="3"/>
-          <circle cx="520" cy="220" r="3"/>
-          <circle cx="600" cy="50" r="3"/>
-          <circle cx="650" cy="170" r="3"/>
-          <circle cx="720" cy="280" r="3"/>
-          <circle cx="780" cy="80" r="3"/>
-          <circle cx="820" cy="200" r="3"/>
-          <circle cx="900" cy="120" r="3"/>
-          <circle cx="940" cy="260" r="3"/>
-          <circle cx="1020" cy="60" r="3"/>
-          <circle cx="1060" cy="180" r="3"/>
-          <circle cx="1140" cy="100" r="3"/>
-          <circle cx="1160" cy="240" r="3"/>
-          <circle cx="280" cy="280" r="3"/>
-          <circle cx="140" cy="220" r="3"/>
-          <circle cx="440" cy="320" r="3"/>
-          <circle cx="680" cy="340" r="3"/>
-          <circle cx="860" cy="340" r="3"/>
-          <circle cx="980" cy="320" r="3"/>
-          <circle cx="100" cy="320" r="3"/>
-        </g>
-      </svg>
-      <div class="section-container">
-        <h1 class="hero-title">PharmaBr<span class="logo-highlight">AI</span>n</h1>
-        <p class="hero-founder">Founded by Sandor Kantor, PhD</p>
-        <p class="hero-tagline">Where Neuroscience Meets Drug Discovery — 20+ Years of Translational Expertise</p>
+      <!-- Animated EEG waveform background -->
+      <div class="hero-bg-wave" aria-hidden="true">
+        <svg class="hero-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="none">
+          <!-- Track 1: alpha-wave pattern, y=140 -->
+          <g class="eeg-track-1">
+            <path stroke="#ffffff" stroke-width="1.5" fill="none" d="M 0,140 L 20,140 Q 32,123 45,140 Q 57,157 70,140 Q 82,123 95,140 Q 107,157 120,140 Q 132,123 145,140 Q 157,157 170,140 L 200,140 L 203,92 L 208,168 L 213,125 L 218,140 L 240,140 Q 252,123 265,140 Q 277,157 290,140 Q 302,123 315,140 Q 327,157 340,140 Q 352,123 365,140 Q 377,157 390,140 Q 402,123 415,140 Q 427,157 440,140 Q 452,123 465,140 Q 477,157 490,140 L 515,140 L 517,112 L 521,156 L 525,140 L 550,140 Q 562,123 575,140 Q 587,157 600,140 Q 612,123 625,140 Q 637,157 650,140 Q 662,123 675,140 Q 687,157 700,140 L 730,140 L 733,88 L 739,170 L 745,127 L 751,140 L 780,140 Q 792,123 805,140 Q 817,157 830,140 Q 842,123 855,140 Q 867,157 880,140 Q 892,123 905,140 Q 917,157 930,140 Q 942,123 955,140 Q 967,157 980,140 L 1005,140 L 1007,115 L 1011,158 L 1015,140 L 1040,140 Q 1052,123 1065,140 Q 1077,157 1090,140 Q 1102,123 1115,140 Q 1127,157 1140,140 Q 1152,123 1165,140 Q 1177,157 1190,140 L 1200,140"/>
+          </g>
+          <!-- Track 2: higher-frequency active pattern, y=300 -->
+          <g class="eeg-track-2">
+            <path stroke="#ffffff" stroke-width="1.5" fill="none" d="M 0,300 Q 8,290 15,300 Q 22,310 30,300 Q 37,290 45,300 Q 52,310 60,300 Q 67,290 75,300 Q 82,310 90,300 Q 97,290 105,300 Q 112,310 120,300 L 138,300 L 140,258 L 145,325 L 150,285 L 155,300 Q 162,290 170,300 Q 177,310 185,300 Q 192,290 200,300 Q 207,310 215,300 Q 222,290 230,300 Q 237,310 245,300 Q 252,290 260,300 Q 267,310 275,300 Q 282,290 290,300 Q 297,310 305,300 L 318,300 L 320,272 L 324,316 L 328,300 Q 335,290 343,300 Q 350,310 358,300 Q 365,290 373,300 Q 380,310 388,300 Q 395,290 403,300 Q 410,310 418,300 L 432,300 L 434,254 L 440,330 L 446,288 L 452,300 Q 459,290 467,300 Q 474,310 482,300 Q 489,290 497,300 Q 504,310 512,300 Q 519,290 527,300 Q 534,310 542,300 Q 549,290 557,300 Q 564,310 572,300 L 585,300 L 587,270 L 591,318 L 595,300 Q 602,290 610,300 Q 617,310 625,300 Q 632,290 640,300 Q 647,310 655,300 Q 662,290 670,300 L 683,300 L 685,256 L 691,328 L 697,286 L 703,300 Q 710,290 718,300 Q 725,310 733,300 Q 740,290 748,300 Q 755,310 763,300 Q 770,290 778,300 Q 785,310 793,300 Q 800,290 808,300 L 820,300 L 822,274 L 826,316 L 830,300 Q 837,290 845,300 Q 852,310 860,300 Q 867,290 875,300 Q 882,310 890,300 L 903,300 L 905,255 L 911,332 L 917,290 L 923,300 Q 930,290 938,300 Q 945,310 953,300 Q 960,290 968,300 Q 975,310 983,300 Q 990,290 998,300 Q 1005,310 1013,300 Q 1020,290 1028,300 L 1040,300 L 1042,273 L 1046,318 L 1050,300 Q 1057,290 1065,300 Q 1072,310 1080,300 Q 1087,290 1095,300 Q 1102,310 1110,300 Q 1117,290 1125,300 L 1138,300 L 1140,257 L 1146,326 L 1152,286 L 1158,300 Q 1165,290 1173,300 Q 1180,310 1188,300 Q 1195,290 1200,300"/>
+          </g>
+          <!-- Track 3: slow large-amplitude pattern, y=460 -->
+          <g class="eeg-track-3">
+            <path stroke="#ffffff" stroke-width="1.5" fill="none" d="M 0,460 L 45,460 Q 60,437 75,460 Q 90,483 105,460 Q 120,437 135,460 Q 150,483 165,460 Q 180,437 195,460 L 230,460 L 234,404 L 240,487 L 246,440 L 252,460 L 290,460 Q 305,437 320,460 Q 335,483 350,460 Q 365,437 380,460 Q 395,483 410,460 Q 425,437 440,460 L 470,460 L 473,427 L 477,478 L 481,460 L 515,460 Q 530,437 545,460 Q 560,483 575,460 Q 590,437 605,460 Q 620,483 635,460 Q 650,437 665,460 L 700,460 L 704,400 L 710,490 L 716,442 L 722,460 L 760,460 Q 775,437 790,460 Q 805,483 820,460 Q 835,437 850,460 Q 865,483 880,460 Q 895,437 910,460 L 945,460 L 948,425 L 952,477 L 956,460 L 990,460 Q 1005,437 1020,460 Q 1035,483 1050,460 Q 1065,437 1080,460 Q 1095,483 1110,460 L 1145,460 L 1149,402 L 1155,487 L 1161,443 L 1167,460 Q 1180,437 1192,460 L 1200,460"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Hero content -->
+      <div class="hero-content-wrapper">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Sandor Kantor, PhD</p>
+          <h1 class="hero-title">Electrophysiology<br>Consulting<br>Services</h1>
+          <p class="hero-tagline">Your Translational EEG Partner for CNS Drug Development</p>
+          <p class="hero-description">Bridging preclinical and clinical development with 20+ years of expertise in neurophysiological biomarkers, pharmaco-EEG, and CNS drug discovery.</p>
+          <div class="hero-buttons">
+            <a href="#services" class="btn btn-primary">View Services</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          </div>
+        </div>
       </div>
     </section>
 
