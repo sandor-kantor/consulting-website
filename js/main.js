@@ -134,10 +134,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function hideModal() {
     if (!openModal) return;
-    openModal.setAttribute('hidden', '');
-    document.body.style.overflow = '';
-    if (openModal._opener) openModal._opener.focus();
+    var closing = openModal;
+    var opener = closing._opener;
     openModal = null;
+    document.body.style.overflow = '';
+    closing.classList.add('modal-closing');
+    setTimeout(function () {
+      closing.setAttribute('hidden', '');
+      closing.classList.remove('modal-closing');
+    }, 200);
+    if (opener) opener.focus();
   }
 
   document.querySelectorAll('.service-learn-more').forEach(function (btn) {

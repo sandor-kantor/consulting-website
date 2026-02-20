@@ -356,6 +356,244 @@ button:focus-visible,
   color: #374151;
 }
 
+/* --- Modal subtitle (category label above title) --- */
+.modal-subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #4ecdc4;
+  margin: 0 0 6px;
+}
+
+/* --- Content sections within a modal --- */
+.modal-section {
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.modal-section:first-child {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: none;
+}
+
+.modal-section-title {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin: 0 0 10px;
+}
+
+.modal-section p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #4b5563;
+  margin: 0 0 8px;
+}
+
+.modal-section ul {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.modal-section ul li {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #374151;
+}
+
+/* --- Software pills --- */
+.modal-pills {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.modal-pills li {
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid #dbeafe;
+}
+
+/* --- Image placeholder --- */
+.modal-image-placeholder {
+  margin-top: 20px;
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #9ca3af;
+  background: #f9fafb;
+}
+
+.modal-image-placeholder svg {
+  color: #d1d5db;
+}
+
+.modal-image-placeholder span {
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+}
+
+/* --- Publications footer --- */
+.modal-pubs-footer {
+  margin-top: 16px;
+  padding: 11px 14px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 3px solid #e5e7eb;
+  font-size: 12px;
+  color: #6b7280;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* --- Two-column layout (modal 4) --- */
+.modal-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+}
+
+.modal-columns .modal-section {
+  border-top: none;
+}
+
+/* --- Opening/intro paragraph --- */
+.modal-opening {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #374151;
+  margin: 0 0 4px;
+  border-left: 3px solid #1a73e8;
+  padding-left: 14px;
+}
+
+/* --- Disease model sub-cards (2×2 grid) --- */
+.modal-sub-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.modal-sub-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 14px;
+  border-left: 3px solid #1a73e8;
+}
+
+.modal-sub-card--sleep      { border-left-color: #1a73e8; }
+.modal-sub-card--neuropsych { border-left-color: #7c3aed; }
+.modal-sub-card--psychedelic { border-left-color: #0d9488; }
+.modal-sub-card--epilepsy   { border-left-color: #d97706; }
+
+.modal-sub-card-title {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0a2540;
+  margin: 0 0 8px;
+}
+
+.modal-sub-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-sub-card ul li {
+  font-size: 12px;
+  color: #4b5563;
+  padding-left: 10px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.modal-sub-card ul li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: #9ca3af;
+  font-weight: 700;
+}
+
+/* Note callout inside sub-card */
+.modal-note {
+  margin-top: 8px;
+  padding: 7px 10px;
+  background: rgba(13, 148, 136, 0.07);
+  border-radius: 4px;
+  font-size: 12px;
+  color: #374151;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* --- Background info cards (modal 6) --- */
+.modal-bg-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.65;
+}
+
+/* --- Modal close animation --- */
+.modal-overlay.modal-closing {
+  animation: modalOverlayOut 0.2s ease forwards;
+}
+
+.modal-overlay.modal-closing .modal-dialog {
+  animation: modalDialogOut 0.2s ease forwards;
+}
+
+@keyframes modalOverlayOut {
+  to { opacity: 0; }
+}
+
+@keyframes modalDialogOut {
+  to { opacity: 0; transform: translateY(8px) scale(0.98); }
+}
+
+/* --- Responsive: collapse multi-column layouts on narrow screens --- */
+@media (max-width: 560px) {
+  .modal-dialog {
+    padding: 28px 20px;
+  }
+
+  .modal-sub-cards,
+  .modal-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ============================================================
    Publications Section
    ============================================================ */
