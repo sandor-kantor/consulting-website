@@ -959,7 +959,7 @@ button:focus-visible,
 footer {
   background-color: #0a2540;
   color: #ffffff;
-  padding: 24px 24px 20px;
+  padding: 14px 24px 12px;
 }
 
 .footer-container {
@@ -972,9 +972,9 @@ footer {
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  padding-bottom: 16px;
+  padding-bottom: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .footer-logo-img {
@@ -1012,7 +1012,7 @@ footer {
 
 .footer-bottom {
   text-align: center;
-  padding-top: 12px;
+  padding-top: 6px;
 }
 
 .footer-copyright {
