@@ -16,7 +16,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
-  color: #333333;
+  color: #515151;
   background: #ffffff;
   padding-top: 72px;
 }
@@ -43,7 +43,7 @@ body {
   left: 16px;
   z-index: 9999;
   padding: 10px 16px;
-  background: #0a2540;
+  background: #1a3f6e;
   color: #ffffff;
   font-family: "Inter", sans-serif;
   font-size: 15px;
@@ -62,7 +62,7 @@ body {
 a:focus-visible,
 button:focus-visible,
 .nav-toggle:focus-visible {
-  outline: 3px solid #1a73e8;
+  outline: 3px solid #3871e0;
   outline-offset: 3px;
   border-radius: 3px;
 }
@@ -81,7 +81,7 @@ button:focus-visible,
   font-family: "Inter", sans-serif;
   font-size: 36px;
   font-weight: 700;
-  color: #0a2540;
+  color: #1a3f6e;
   margin-bottom: 0;
   text-align: center;
   letter-spacing: -0.02em;
@@ -92,7 +92,7 @@ button:focus-visible,
   display: block;
   width: 32px;
   height: 3px;
-  background: #1a73e8;
+  background: #3871e0;
   border-radius: 2px;
   margin: 14px auto 48px;
 }
@@ -102,7 +102,7 @@ button:focus-visible,
    ============================================================ */
 
 #about {
-  background-color: #f8f9fa;
+  background-color: #f7f9fc;
 }
 
 .about-content {
@@ -155,7 +155,7 @@ button:focus-visible,
   font-family: "Inter", sans-serif;
   font-size: 28px;
   font-weight: 700;
-  color: #1a73e8;
+  color: #3871e0;
 }
 
 .highlight-label {
@@ -185,7 +185,7 @@ button:focus-visible,
    ============================================================ */
 
 #therapeutic-areas {
-  background: #0a2540;
+  background: #1a3f6e;
   padding: 28px 24px;
 }
 
@@ -204,7 +204,7 @@ button:focus-visible,
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #4ecdc4;
+  color: #64c2e4;
   white-space: nowrap;
   flex-shrink: 0;
   margin: 0;
@@ -232,8 +232,8 @@ button:focus-visible,
 }
 
 .ta-badge:hover {
-  background: rgba(78, 205, 196, 0.14);
-  border-color: rgba(78, 205, 196, 0.45);
+  background: rgba(100, 194, 228, 0.14);
+  border-color: rgba(100, 194, 228, 0.45);
   color: #ffffff;
 }
 
@@ -271,13 +271,13 @@ button:focus-visible,
 }
 
 .service-card:hover {
-  border-color: #1a73e8;
+  border-color: #3871e0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   transform: translateY(-2px);
 }
 
 .service-icon {
-  color: #1a73e8;
+  color: #3871e0;
   margin-bottom: 20px;
 }
 
@@ -285,7 +285,7 @@ button:focus-visible,
   font-family: "Inter", sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: #0a2540;
+  color: #1a3f6e;
   margin-bottom: 12px;
 }
 
@@ -305,7 +305,7 @@ button:focus-visible,
   font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 600;
-  color: #1a73e8;
+  color: #3871e0;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -318,7 +318,7 @@ button:focus-visible,
 }
 
 .service-learn-more:hover {
-  color: #1557b0;
+  color: #2d5fc0;
   gap: 8px;
 }
 
@@ -329,7 +329,7 @@ button:focus-visible,
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(10, 37, 64, 0.55);
+  background: rgba(26, 63, 110, 0.55);
   z-index: 2000;
   display: flex;
   align-items: center;
@@ -383,17 +383,17 @@ button:focus-visible,
 }
 
 .modal-close:hover {
-  color: #0a2540;
+  color: #1a3f6e;
   background: #f3f4f6;
 }
 
 .modal-close:focus-visible {
-  outline: 3px solid #1a73e8;
+  outline: 3px solid #3871e0;
   outline-offset: 2px;
 }
 
 .modal-icon {
-  color: #1a73e8;
+  color: #3871e0;
   margin-bottom: 16px;
 }
 
@@ -401,7 +401,7 @@ button:focus-visible,
   font-family: "Inter", sans-serif;
   font-size: 22px;
   font-weight: 700;
-  color: #0a2540;
+  color: #1a3f6e;
   margin: 0 0 16px;
   line-height: 1.3;
   padding-right: 32px;
@@ -435,7 +435,7 @@ button:focus-visible,
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #4ecdc4;
+  color: #64c2e4;
   margin: 0 0 6px;
 }
 
@@ -494,14 +494,14 @@ button:focus-visible,
 }
 
 .modal-pills li {
-  background: #eff6ff;
-  color: #1d4ed8;
+  background: #e8f4fc;
+  color: #3871e0;
   font-family: "Inter", sans-serif;
   font-size: 13px;
   font-weight: 500;
   padding: 5px 12px;
   border-radius: 20px;
-  border: 1px solid #dbeafe;
+  border: 1px solid #c8e4f4;
 }
 
 /* --- Image placeholder --- */
@@ -571,7 +571,7 @@ button:focus-visible,
 .modal-pubs-footer {
   margin-top: 16px;
   padding: 11px 14px;
-  background: #f8f9fa;
+  background: #f7f9fc;
   border-radius: 6px;
   border-left: 3px solid #e5e7eb;
   font-size: 12px;
@@ -602,7 +602,7 @@ button:focus-visible,
   line-height: 1.7;
   color: #374151;
   margin: 0 0 4px;
-  border-left: 3px solid #1a73e8;
+  border-left: 3px solid #3871e0;
   padding-left: 14px;
 }
 
@@ -614,22 +614,22 @@ button:focus-visible,
 }
 
 .modal-sub-card {
-  background: #f8f9fa;
+  background: #f7f9fc;
   border-radius: 8px;
   padding: 14px;
-  border-left: 3px solid #1a73e8;
+  border-left: 3px solid #3871e0;
 }
 
-.modal-sub-card--sleep      { border-left-color: #1a73e8; }
-.modal-sub-card--neuropsych { border-left-color: #7c3aed; }
-.modal-sub-card--psychedelic { border-left-color: #0d9488; }
-.modal-sub-card--epilepsy   { border-left-color: #d97706; }
+.modal-sub-card--sleep      { border-left-color: #3871e0; }
+.modal-sub-card--neuropsych { border-left-color: #6b5ce7; }
+.modal-sub-card--psychedelic { border-left-color: #2a9d8f; }
+.modal-sub-card--epilepsy   { border-left-color: #c8880a; }
 
 .modal-sub-card-title {
   font-family: "Inter", sans-serif;
   font-size: 12px;
   font-weight: 700;
-  color: #0a2540;
+  color: #1a3f6e;
   margin: 0 0 8px;
 }
 
@@ -662,7 +662,7 @@ button:focus-visible,
 .modal-note {
   margin-top: 8px;
   padding: 7px 10px;
-  background: rgba(13, 148, 136, 0.07);
+  background: rgba(42, 157, 143, 0.07);
   border-radius: 4px;
   font-size: 12px;
   color: #374151;
@@ -672,7 +672,7 @@ button:focus-visible,
 
 /* --- Background info cards (modal 6) --- */
 .modal-bg-card {
-  background: #f8f9fa;
+  background: #f7f9fc;
   border-radius: 8px;
   padding: 14px 16px;
   margin-top: 12px;
@@ -716,7 +716,7 @@ button:focus-visible,
    ============================================================ */
 
 #case-studies {
-  background-color: #f8f9fa;
+  background-color: #f7f9fc;
 }
 
 .case-studies-grid {
@@ -728,7 +728,7 @@ button:focus-visible,
 .case-study-card {
   background: #ffffff;
   border: 1px solid #e5e7eb;
-  border-left: 4px solid #1a73e8;
+  border-left: 4px solid #3871e0;
   border-radius: 8px;
   overflow: hidden;
   display: flex;
@@ -741,8 +741,8 @@ button:focus-visible,
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
 }
 
-.case-study-card--teal { border-left-color: #0d9488; }
-.case-study-card--blue { border-left-color: #1a73e8; }
+.case-study-card--teal { border-left-color: #2a9d8f; }
+.case-study-card--blue { border-left-color: #3871e0; }
 
 .case-study-figure {
   height: 210px;
@@ -778,7 +778,7 @@ button:focus-visible,
   font-family: "Inter", sans-serif;
   font-size: 18px;
   font-weight: 700;
-  color: #0a2540;
+  color: #1a3f6e;
   margin: 0 0 6px;
 }
 
@@ -812,13 +812,13 @@ button:focus-visible,
   content: "→";
   position: absolute;
   left: 0;
-  color: #1a73e8;
+  color: #3871e0;
   font-size: 12px;
   top: 1px;
 }
 
 .case-study-card--teal .case-study-points li::before {
-  color: #0d9488;
+  color: #2a9d8f;
 }
 
 .case-study-citation {
@@ -850,7 +850,7 @@ button:focus-visible,
 .publication-item {
   display: flex;
   gap: 24px;
-  background: #f8f9fa;
+  background: #f7f9fc;
   border-radius: 8px;
   padding: 28px;
   border: 1px solid #e5e7eb;
@@ -861,7 +861,7 @@ button:focus-visible,
 }
 
 .publication-item:hover {
-  border-color: #1a73e8;
+  border-color: #3871e0;
   transform: translateY(-2px);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
@@ -871,7 +871,7 @@ button:focus-visible,
   font-family: "Inter", sans-serif;
   font-size: 15px;
   font-weight: 700;
-  color: #1a73e8;
+  color: #3871e0;
   padding-top: 2px;
 }
 
@@ -883,20 +883,20 @@ button:focus-visible,
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: #0a2540;
+  color: #1a3f6e;
   margin-bottom: 8px;
   line-height: 1.4;
 }
 
 .publication-title a {
-  color: #0a2540;
+  color: #1a3f6e;
   text-decoration: none;
   transition: color 0.2s ease;
   cursor: pointer;
 }
 
 .publication-title a:hover {
-  color: #1a73e8;
+  color: #3871e0;
   text-decoration: underline;
 }
 
@@ -917,7 +917,7 @@ button:focus-visible,
    ============================================================ */
 
 #contact {
-  background-color: #f8f9fa;
+  background-color: #f7f9fc;
 }
 
 .contact-content {
@@ -939,11 +939,11 @@ button:focus-visible,
 
 .contact-detail svg {
   flex-shrink: 0;
-  color: #1a73e8;
+  color: #3871e0;
 }
 
 .contact-detail a {
-  color: #1a73e8;
+  color: #3871e0;
   text-decoration: none;
   font-weight: 500;
 }
@@ -957,7 +957,7 @@ button:focus-visible,
    ============================================================ */
 
 footer {
-  background-color: #0a2540;
+  background-color: #1a3f6e;
   color: #ffffff;
   padding: 14px 24px 12px;
 }
@@ -978,7 +978,7 @@ footer {
 }
 
 .footer-logo-img {
-  width: 220px;
+  width: 180px;
   height: auto;
   display: block;
   filter: brightness(0) invert(1);
@@ -1070,14 +1070,21 @@ footer {
   border-bottom-color: #e5e7eb;
 }
 
-/* Brighten logo when overlaid on the dark hero */
-.navbar:not(.navbar-scrolled) .nav-logo-img {
+/* White logo icon + text when overlaid on the dark hero */
+.navbar:not(.navbar-scrolled) .nav-logo-icon {
   filter: brightness(0) invert(1);
 }
 
-.navbar:not(.navbar-scrolled) .nav-logo:hover .nav-logo-img {
-  filter: brightness(0) invert(1);
+.navbar:not(.navbar-scrolled) .nav-logo-text {
+  color: #ffffff;
+}
+
+.navbar:not(.navbar-scrolled) .nav-logo:hover .nav-logo-icon {
   opacity: 0.85;
+}
+
+.navbar:not(.navbar-scrolled) .nav-logo:hover .nav-logo-text {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .navbar:not(.navbar-scrolled) .nav-menu a {
@@ -1107,17 +1114,30 @@ footer {
   text-decoration: none;
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
-.nav-logo-img {
-  height: 128px;
+.nav-logo-icon {
+  height: 36px;
   width: auto;
   display: block;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, filter 0.3s ease;
 }
 
-.nav-logo:hover .nav-logo-img {
-  opacity: 0.85;
+.nav-logo-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #1a3f6e;
+  transition: color 0.3s ease;
+}
+
+.logo-highlight {
+  color: #64c2e4;
+}
+
+.nav-logo:hover .nav-logo-text {
+  color: #1a3f6e;
 }
 
 .nav-menu {
@@ -1137,11 +1157,11 @@ footer {
 }
 
 .nav-menu a:hover {
-  color: #1a73e8;
+  color: #3871e0;
 }
 
 .nav-menu a.active-link {
-  color: #1a73e8;
+  color: #3871e0;
   font-weight: 600;
 }
 
@@ -1153,7 +1173,7 @@ footer {
   display: block;
   width: 24px;
   height: 2px;
-  background-color: #0a2540;
+  background-color: #1a3f6e;
   margin: 5px 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -1183,7 +1203,7 @@ footer {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(145deg, #091a2a 0%, #0f2b3c 55%, #0c2436 100%);
+  background: linear-gradient(145deg, #112d52 0%, #1a3f6e 55%, #153760 100%);
   overflow: hidden;
 }
 
@@ -1232,14 +1252,8 @@ footer {
 }
 
 .hero-photo img {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  object-fit: contain;
-  object-position: center center;
-  background-color: #ffffff;
-  border: 3px solid rgba(78, 205, 196, 0.28);
-  box-shadow: 0 0 0 10px rgba(78, 205, 196, 0.06), 0 20px 50px rgba(0, 0, 0, 0.4);
+  width: 320px;
+  height: auto;
   display: block;
 }
 
@@ -1249,7 +1263,7 @@ footer {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #4ecdc4;
+  color: #64c2e4;
   margin: 0 0 20px;
 }
 
@@ -1303,14 +1317,14 @@ footer {
 }
 
 .btn-primary {
-  background: #1a73e8;
+  background: #3871e0;
   color: #ffffff;
-  border-color: #1a73e8;
+  border-color: #3871e0;
 }
 
 .btn-primary:hover {
-  background: #1557b0;
-  border-color: #1557b0;
+  background: #2d5fc0;
+  border-color: #2d5fc0;
   transform: translateY(-2px);
 }
 
@@ -1372,8 +1386,7 @@ footer {
   }
 
   .hero-photo img {
-    width: 160px;
-    height: 160px;
+    width: 200px;
   }
 
   .hero-content-wrapper {
@@ -1466,6 +1479,10 @@ footer {
     flex-direction: column;
     gap: 28px;
     text-align: center;
+  }
+
+  .footer-logo-img {
+    margin: 0 auto;
   }
 
   .footer-nav ul {
