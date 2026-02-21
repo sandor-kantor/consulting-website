@@ -879,6 +879,16 @@ button:focus-visible,
   line-height: 1.4;
 }
 
+.publication-title a {
+  color: #0a2540;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.publication-title a:hover {
+  color: #1a73e8;
+}
+
 .publication-authors {
   font-size: 14px;
   color: #4b5563;
