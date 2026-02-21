@@ -977,24 +977,12 @@ footer {
   margin-bottom: 24px;
 }
 
-.footer-logo {
-  font-family: "Inter", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 0 0 10px;
-  letter-spacing: -0.01em;
-}
-
-.footer-logo-ai {
-  color: #4ecdc4;
-}
-
-.footer-tagline {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.48);
-  margin: 0;
-  line-height: 1.6;
+.footer-logo-img {
+  width: 120px;
+  height: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
 }
 
 .footer-contact-list {
@@ -1082,21 +1070,14 @@ footer {
   border-bottom-color: #e5e7eb;
 }
 
-/* White text when overlaid on the dark hero */
-.navbar:not(.navbar-scrolled) .nav-logo {
-  color: #ffffff;
+/* Brighten logo when overlaid on the dark hero */
+.navbar:not(.navbar-scrolled) .nav-logo-img {
+  filter: brightness(0) invert(1);
 }
 
-.navbar:not(.navbar-scrolled) .logo-highlight {
-  color: #4ecdc4;
-}
-
-.navbar:not(.navbar-scrolled) .nav-logo:hover {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.navbar:not(.navbar-scrolled) .nav-logo:hover .logo-highlight {
-  color: rgba(78, 205, 196, 0.75);
+.navbar:not(.navbar-scrolled) .nav-logo:hover .nav-logo-img {
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
 }
 
 .navbar:not(.navbar-scrolled) .nav-menu a {
@@ -1123,23 +1104,20 @@ footer {
 }
 
 .nav-logo {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  color: #0a2540;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
-.logo-highlight {
-  color: #1a73e8;
+.nav-logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  transition: opacity 0.2s ease;
 }
 
-.nav-logo:hover {
-  color: #0a2540;
-}
-
-.nav-logo:hover .logo-highlight {
-  color: #1557b0;
+.nav-logo:hover .nav-logo-img {
+  opacity: 0.85;
 }
 
 .nav-menu {
