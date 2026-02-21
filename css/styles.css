@@ -133,6 +133,10 @@ button:focus-visible,
   color: #4b5563;
 }
 
+.about-text p:first-child {
+  margin-top: 0;
+}
+
 .about-highlights {
   display: flex;
   gap: 24px;
