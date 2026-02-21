@@ -883,10 +883,12 @@ button:focus-visible,
   color: #0a2540;
   text-decoration: none;
   transition: color 0.2s ease;
+  cursor: pointer;
 }
 
 .publication-title a:hover {
   color: #1a73e8;
+  text-decoration: underline;
 }
 
 .publication-authors {
