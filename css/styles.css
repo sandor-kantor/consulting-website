@@ -978,7 +978,7 @@ footer {
 }
 
 .footer-logo-img {
-  width: 120px;
+  width: 180px;
   height: auto;
   display: block;
   filter: brightness(0) invert(1);
@@ -1110,7 +1110,7 @@ footer {
 }
 
 .nav-logo-img {
-  height: 44px;
+  height: 64px;
   width: auto;
   display: block;
   transition: opacity 0.2s ease;
