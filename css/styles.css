@@ -970,7 +970,7 @@ footer {
 .footer-top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 40px;
   padding-bottom: 32px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -978,7 +978,7 @@ footer {
 }
 
 .footer-logo-img {
-  width: 360px;
+  width: 220px;
   height: auto;
   display: block;
   filter: brightness(0) invert(1);
