@@ -959,7 +959,7 @@ button:focus-visible,
 footer {
   background-color: #1a3f6e;
   color: #ffffff;
-  padding: 14px 24px 12px;
+  padding: 10px 24px 8px;
 }
 
 .footer-container {
@@ -971,10 +971,10 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
-  padding-bottom: 10px;
+  gap: 24px;
+  padding-bottom: 6px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .footer-logo-img {
@@ -1012,7 +1012,7 @@ footer {
 
 .footer-bottom {
   text-align: center;
-  padding-top: 6px;
+  padding-top: 4px;
 }
 
 .footer-copyright {
@@ -1252,9 +1252,15 @@ footer {
 }
 
 .hero-photo img {
-  width: 320px;
-  height: auto;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  object-fit: contain;
+  background-color: #ffffff;
+  border: 3px solid rgba(100, 194, 228, 0.28);
+  box-shadow: 0 0 0 10px rgba(100, 194, 228, 0.06), 0 20px 50px rgba(0, 0, 0, 0.4);
   display: block;
+  padding: 30px;
 }
 
 .hero-eyebrow {
@@ -1386,7 +1392,9 @@ footer {
   }
 
   .hero-photo img {
-    width: 200px;
+    width: 240px;
+    height: 240px;
+    padding: 20px;
   }
 
   .hero-content-wrapper {
