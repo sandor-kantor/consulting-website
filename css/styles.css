@@ -222,7 +222,7 @@ button:focus-visible,
   font-family: "Inter", sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.82);
+  color: #ffffff;
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 20px;
@@ -379,6 +379,11 @@ button:focus-visible,
   cursor: pointer;
   padding: 4px 8px;
   border-radius: 4px;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: color 0.15s ease, background 0.15s ease;
 }
 
@@ -996,7 +1001,7 @@ footer {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: rgba(255, 255, 255, 0.58);
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   font-size: 14px;
   transition: color 0.15s ease;
@@ -1017,7 +1022,7 @@ footer {
 
 .footer-copyright {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.32);
+  color: rgba(255, 255, 255, 0.70);
   margin: 0;
 }
 
@@ -1032,7 +1037,7 @@ footer {
 }
 
 .footer-nav a {
-  color: rgba(255, 255, 255, 0.58);
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   font-size: 13px;
   transition: color 0.15s ease;
@@ -1045,7 +1050,7 @@ footer {
 .footer-legal {
   margin-top: 4px;
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.24);
+  color: rgba(255, 255, 255, 0.65);
   line-height: 1.6;
   margin-bottom: 0;
 }
@@ -1088,7 +1093,7 @@ footer {
 }
 
 .navbar:not(.navbar-scrolled) .nav-menu a {
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .navbar:not(.navbar-scrolled) .nav-menu a:hover,
@@ -1289,7 +1294,7 @@ footer {
 .hero-description {
   font-size: 17px;
   line-height: 1.75;
-  color: rgba(255, 255, 255, 0.56);
+  color: rgba(255, 255, 255, 0.80);
   margin: 0 0 44px;
   max-width: 500px;
 }
@@ -1542,6 +1547,30 @@ footer {
     flex-basis: 100%;
   }
 
+}
+
+/* ============================================================
+   Reduced Motion Preferences
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  .animate-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 /* ============================================================
