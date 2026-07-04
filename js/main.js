@@ -35,11 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', function () {
       if (!ticking) {
         requestAnimationFrame(function () {
-          if (window.scrollY > 50) {
-            navbar.classList.add('navbar-scrolled');
-          } else {
-            navbar.classList.remove('navbar-scrolled');
-          }
+          navbar.classList.toggle('navbar-scrolled', window.scrollY > 50);
           ticking = false;
         });
         ticking = true;
