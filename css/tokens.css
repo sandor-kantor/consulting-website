@@ -1,0 +1,102 @@
+/* PharmaBrAIn design tokens for the website, generated from the PharmaBrAIn design system.
+   Do not edit by hand: when a token changes in the design system, replace this file. */
+
+@font-face { font-family: "IBM Plex Sans"; src: url("../assets/fonts/IBMPlexSans-Regular-Latin1.v3.005.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans"; src: url("../assets/fonts/IBMPlexSans-Italic-Latin1.v3.005.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans"; src: url("../assets/fonts/IBMPlexSans-Medium-Latin1.v3.005.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans"; src: url("../assets/fonts/IBMPlexSans-SemiBold-Latin1.v3.005.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("../assets/fonts/IBMPlexMono-Regular-Latin1.v2.005.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("../assets/fonts/IBMPlexMono-Medium-Latin1.v2.005.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+/* Plex's symbol subset, limited to the arrows (U+2190-2199), which the Latin-1 files above lack; see formats.md. */
+@font-face { font-family: "IBM Plex Sans"; src: url("../assets/fonts/IBMPlexSans-Regular-Pi.v3.005.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; unicode-range: U+2190-2199; }
+@font-face { font-family: "IBM Plex Sans"; src: url("../assets/fonts/IBMPlexSans-Medium-Pi.v3.005.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; unicode-range: U+2190-2199; }
+@font-face { font-family: "IBM Plex Sans"; src: url("../assets/fonts/IBMPlexSans-SemiBold-Pi.v3.005.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; unicode-range: U+2190-2199; }
+
+:root {
+  /* colour */
+  --brand-navy: #064072;
+  --brand-cyan: #33c5e8;
+  --brand-blue: #1575a2;
+  --surface-000: #ffffff;
+  --surface-100: #f7f9fc;
+  --surface-200: #eef2f6;
+  --surface-300: #e2e8ef;
+  --border-subtle: #14202c14;
+  --border-strong: #14202c26;
+  --text: #14202c;
+  --text-muted: #4a5868;
+  --text-dim: #647283;
+  --heading: var(--brand-navy);
+  --accent: var(--brand-cyan);
+  --accent-hover: #6dd1ed;
+  --accent-ink: var(--brand-navy);
+  --accent-text: var(--brand-blue);
+  --accent-control: var(--brand-blue);
+  --accent-tint: #33c5e81f;
+  --inverse-surface: var(--brand-navy);
+  --inverse-text: #ffffff;
+  --inverse-text-muted: #ccd7e3;
+  --inverse-text-dim: #b3c3d5;
+  --inverse-accent: var(--brand-cyan);
+  --inverse-border-subtle: #ffffff1f;
+  --inverse-border-strong: #ffffff66;
+  --overlay: #06407299;
+  --plot-frame: #0b0f1433;
+  --plot-grid: #0b0f1414;
+  --plot-reference: #5e6c7a;
+  --series-control: #5f6b78;
+  --series-1: #eb6834;
+  --series-2: #2a78d6;
+  --series-3: #1baf7a;
+  --series-4: #4a3aa7;
+  --series-5: #e87ba4;
+  --series-6: #eda100;
+  --dark-phase: #28396e17;
+  /* shadow */
+  --shadow-menu: 0 8px 24px rgba(6,64,114,0.12);
+  --shadow-dialog: 0 24px 64px rgba(6,64,114,0.24);
+  /* space */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  /* radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+  /* opacity */
+  --trace-on-navy: 0.6;
+  --trace-on-paper: 0.35;
+  --error-band: 0.16;
+  --error-bar: 0.55;
+  /* size */
+  --content-max: 1200px;
+  --text-max: 680px;
+  --panel-max: 720px;
+  --nav-height: 72px;
+  /* type families */
+  --font-sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+
+/* type styles: apply as classes beside the pb- component classes */
+.display-xl { font-family: var(--font-sans); font-size: 56px; line-height: 60px; font-weight: 600; letter-spacing: -0.025em; }
+.display { font-family: var(--font-sans); font-size: 40px; line-height: 46px; font-weight: 600; letter-spacing: -0.02em; }
+.h2 { font-family: var(--font-sans); font-size: 26px; line-height: 32px; font-weight: 600; letter-spacing: -0.01em; }
+.h3 { font-family: var(--font-sans); font-size: 19px; line-height: 26px; font-weight: 600; }
+.stat { font-family: var(--font-sans); font-size: 40px; line-height: 44px; font-weight: 600; letter-spacing: -0.02em; }
+.lead { font-family: var(--font-sans); font-size: 19px; line-height: 30px; font-weight: 400; }
+.body { font-family: var(--font-sans); font-size: 16px; line-height: 26px; font-weight: 400; }
+.body-strong { font-family: var(--font-sans); font-size: 16px; line-height: 26px; font-weight: 600; }
+.small { font-family: var(--font-sans); font-size: 14px; line-height: 22px; font-weight: 400; }
+.label { font-family: var(--font-sans); font-size: 15px; line-height: 20px; font-weight: 600; }
+.caption { font-family: var(--font-sans); font-size: 12px; line-height: 18px; font-weight: 400; }
+.eyebrow { font-family: var(--font-mono); font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.08em; }
+.index { font-family: var(--font-mono); font-size: 13px; line-height: 16px; font-weight: 500; letter-spacing: 0.04em; }
+.data { font-family: var(--font-mono); font-size: 14px; line-height: 20px; font-weight: 400; }

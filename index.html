@@ -8,14 +8,11 @@
       name="description"
       content="PharmaBrAIn provides expert consulting in neurophysiology, EEG biomarkers, AI/ML applications in neuroscience, and CNS drug discovery. Founded by Sandor Kantor, PhD, with over 20 years of translational research experience."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
     <link rel="icon" type="image/png" href="assets/images/pharmabrain-icon.png" />
     <link rel="apple-touch-icon" href="assets/images/pharmabrain-icon.png" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/legacy.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />
@@ -53,7 +50,7 @@
     }
     </script>
   </head>
-  <body>
+  <body class="pb body">
 
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
@@ -110,7 +107,7 @@
     <section id="about">
       <div class="section-container">
         <h2 class="section-title">About</h2>
-        <div class="about-content animate-on-scroll">
+        <div class="about-content">
           <div class="about-image">
             <img src="assets/images/profile.jpg" alt="Sandor Kantor, PhD — Founder of PharmaBrAIn" />
           </div>
@@ -163,7 +160,7 @@
         <p class="section-subtitle">I offer specialist consulting services tailored to pharmaceutical companies, biotech firms, and academic research groups working in CNS drug discovery and neuroscience research.</p>
         <div class="services-grid">
 
-          <div class="service-card animate-on-scroll">
+          <div class="service-card">
             <div class="service-icon">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect x="4" y="4" width="16" height="16" rx="2" />
@@ -176,7 +173,7 @@
             <button class="service-learn-more" data-modal="modal-system-impl" aria-haspopup="dialog">Learn more</button>
           </div>
 
-          <div class="service-card animate-on-scroll">
+          <div class="service-card">
             <div class="service-icon">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect x="8" y="2" width="8" height="4" rx="1" />
@@ -190,7 +187,7 @@
             <button class="service-learn-more" data-modal="modal-pharmaco-eeg" aria-haspopup="dialog">Learn more</button>
           </div>
 
-          <div class="service-card animate-on-scroll">
+          <div class="service-card">
             <div class="service-icon">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="18" y1="20" x2="18" y2="10" />
@@ -204,7 +201,7 @@
             <button class="service-learn-more" data-modal="modal-data-analysis" aria-haspopup="dialog">Learn more</button>
           </div>
 
-          <div class="service-card animate-on-scroll">
+          <div class="service-card">
             <div class="service-icon">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="2" y1="12" x2="22" y2="12" />
@@ -217,7 +214,7 @@
             <button class="service-learn-more" data-modal="modal-translational" aria-haspopup="dialog">Learn more</button>
           </div>
 
-          <div class="service-card animate-on-scroll">
+          <div class="service-card">
             <div class="service-icon">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <circle cx="12" cy="5" r="2" />
@@ -233,7 +230,7 @@
             <button class="service-learn-more" data-modal="modal-disease-models" aria-haspopup="dialog">Learn more</button>
           </div>
 
-          <div class="service-card animate-on-scroll">
+          <div class="service-card">
             <div class="service-icon">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
@@ -256,7 +253,7 @@
         <p class="section-subtitle">Real-world examples of neurophysiological studies conducted across species and therapeutic areas.</p>
         <div class="case-studies-grid">
 
-          <div class="case-study-card case-study-card--teal animate-on-scroll">
+          <div class="case-study-card case-study-card--teal">
             <!-- IMAGE: Pending IP clearance — add casestudy-psilocybin-sleep.jpg here when approved -->
             <div class="case-study-content">
               <h3 class="case-study-title">Sleep-Wake Profiling Study</h3>
@@ -271,7 +268,7 @@
             </div>
           </div>
 
-          <div class="case-study-card case-study-card--blue animate-on-scroll">
+          <div class="case-study-card case-study-card--blue">
             <!-- IMAGE: Pending IP clearance — add casestudy-mmn-ketamine.jpg here when approved -->
             <div class="case-study-content">
               <h3 class="case-study-title">Mismatch Negativity (MMN) Study</h3>
@@ -296,7 +293,7 @@
         <p class="section-subtitle">A selection of peer-reviewed publications from over 20 papers spanning neurophysiology, sleep research, neurodegeneration, and CNS pharmacology.</p>
         <div class="publications-list">
 
-          <article class="publication-item animate-on-scroll">
+          <article class="publication-item">
             <time class="publication-year" datetime="2023">2023</time>
             <div class="publication-details">
               <h3 class="publication-title"><a href="https://doi.org/10.1016/j.bbr.2023.114473" target="_blank" rel="noopener noreferrer">Ketamine suppresses REM sleep and markedly increases EEG gamma oscillations in the Wistar Kyoto rat model of treatment-resistant depression</a></h3>
@@ -305,7 +302,7 @@
             </div>
           </article>
 
-          <article class="publication-item animate-on-scroll">
+          <article class="publication-item">
             <time class="publication-year" datetime="2017">2017</time>
             <div class="publication-details">
               <h3 class="publication-title"><a href="https://doi.org/10.1007/s13311-017-0546-7" target="_blank" rel="noopener noreferrer">Chronic paroxetine treatment prevents the emergence of abnormal EEG oscillations in Huntington's disease mice</a></h3>
@@ -314,7 +311,7 @@
             </div>
           </article>
 
-          <article class="publication-item animate-on-scroll">
+          <article class="publication-item">
             <time class="publication-year" datetime="2016">2016</time>
             <div class="publication-details">
               <h3 class="publication-title"><a href="https://doi.org/10.1016/j.neuropharm.2016.01.027" target="_blank" rel="noopener noreferrer">A single dose of hypnotic corrects sleep and EEG abnormalities in symptomatic Huntington's disease mice</a></h3>
@@ -323,7 +320,7 @@
             </div>
           </article>
 
-          <article class="publication-item animate-on-scroll">
+          <article class="publication-item">
             <time class="publication-year" datetime="2014">2014</time>
             <div class="publication-details">
               <h3 class="publication-title"><a href="https://doi.org/10.1007/s00213-013-3273-8" target="_blank" rel="noopener noreferrer">Effects of the fatty acid amide hydrolase inhibitor URB597 on coping behavior under challenging conditions in mice</a></h3>
@@ -332,7 +329,7 @@
             </div>
           </article>
 
-          <article class="publication-item animate-on-scroll">
+          <article class="publication-item">
             <time class="publication-year" datetime="2013">2013</time>
             <div class="publication-details">
               <h3 class="publication-title"><a href="https://doi.org/10.5665/sleep.2870" target="_blank" rel="noopener noreferrer">Orexin gene therapy restores the timing and maintenance of wakefulness in narcoleptic mice</a></h3>
@@ -341,7 +338,7 @@
             </div>
           </article>
 
-          <article class="publication-item animate-on-scroll">
+          <article class="publication-item">
             <time class="publication-year" datetime="2013">2013</time>
             <div class="publication-details">
               <h3 class="publication-title"><a href="https://doi.org/10.1093/brain/awt128" target="_blank" rel="noopener noreferrer">Progressive sleep and electroencephalogram changes in mice carrying the Huntington's disease mutation</a></h3>
@@ -358,7 +355,7 @@
       <div class="section-container">
         <h2 class="section-title">Get in Touch</h2>
         <p class="section-subtitle">Interested in discussing a project or exploring how I can support your research programme? I'd welcome the opportunity to hear about your needs.</p>
-        <div class="contact-content animate-on-scroll">
+        <div class="contact-content">
 
           <div class="contact-detail">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
