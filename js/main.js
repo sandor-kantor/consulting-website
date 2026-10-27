@@ -1,19 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const navToggle = document.querySelector('.nav-toggle');
-  const navMenu = document.querySelector('.nav-menu');
+  const menuButton = document.querySelector('.pb-menu-button');
+  const navMenu = document.getElementById('primary-nav');
 
-  if (!navToggle || !navMenu) return;
-
-  function closeMenu() {
-    navMenu.classList.remove('active');
-    navToggle.classList.remove('active');
-    navToggle.setAttribute('aria-expanded', 'false');
+  function setMenuOpen(isOpen) {
+    navMenu.classList.toggle('is-open', isOpen);
+    menuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   }
 
-  navToggle.addEventListener('click', function () {
-    const isOpen = navMenu.classList.toggle('active');
-    navToggle.classList.toggle('active', isOpen);
-    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  function closeMenu() {
+    setMenuOpen(false);
+  }
+
+  menuButton.addEventListener('click', function () {
+    setMenuOpen(!navMenu.classList.contains('is-open'));
   });
 
   navMenu.querySelectorAll('a').forEach(function (link) {
@@ -21,27 +20,24 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.addEventListener('click', function (event) {
-    if (!navMenu.classList.contains('active')) return;
-    if (!navMenu.contains(event.target) && !navToggle.contains(event.target)) {
+    if (!navMenu.classList.contains('is-open')) return;
+    if (!navMenu.contains(event.target) && !menuButton.contains(event.target)) {
       closeMenu();
     }
   });
 
-  // Navbar scroll shadow
-  const navbar = document.querySelector('.navbar');
-  let ticking = false;
+  // Escape closes the menu and returns focus to the menu button
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && navMenu.classList.contains('is-open')) {
+      closeMenu();
+      menuButton.focus();
+    }
+  });
 
-  if (navbar) {
-    window.addEventListener('scroll', function () {
-      if (!ticking) {
-        requestAnimationFrame(function () {
-          navbar.classList.toggle('navbar-scrolled', window.scrollY > 50);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
-  }
+  // Widening the window past the menu breakpoint (same query as components.css) closes the menu
+  window.matchMedia('(max-width: 768px)').addEventListener('change', function (event) {
+    if (!event.matches) closeMenu();
+  });
 
   // Active nav link highlighting via Intersection Observer
   const sections = document.querySelectorAll('section[id]');
@@ -50,9 +46,9 @@ document.addEventListener('DOMContentLoaded', function () {
   function setActiveLink(id) {
     navLinks.forEach(function (link) {
       if (link.getAttribute('href') === '#' + id) {
-        link.classList.add('active-link');
+        link.setAttribute('aria-current', 'true');
       } else {
-        link.classList.remove('active-link');
+        link.removeAttribute('aria-current');
       }
     });
   }
@@ -94,47 +90,24 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(section);
   });
 
-  // Scroll fade-in animations
-  const animatedElements = document.querySelectorAll('.animate-on-scroll');
-
-  // Apply stagger delay to service cards
-  document.querySelectorAll('.services-grid .animate-on-scroll').forEach(function (card, index) {
-    card.style.transitionDelay = (index * 100) + 'ms';
-  });
-
-  // Apply stagger delay to case study cards
-  document.querySelectorAll('.case-studies-grid .animate-on-scroll').forEach(function (card, index) {
-    card.style.transitionDelay = (index * 150) + 'ms';
-  });
-
-  // Apply stagger delay to publication items
-  document.querySelectorAll('.publications-list .animate-on-scroll').forEach(function (item, index) {
-    item.style.transitionDelay = (index * 80) + 'ms';
-  });
-
-  const animationObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        animationObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  animatedElements.forEach(function (el) {
-    animationObserver.observe(el);
-  });
-
   // Service card modals
   var openModal = null;
+
+  // components.css switches the fade off under reduced motion, so no animationend fires then
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   function showModal(id) {
     var overlay = document.getElementById(id);
     if (!overlay) return;
+    // Reopened during its closing fade: cancel the pending hide
+    clearTimeout(overlay._hideTimer);
+    overlay.classList.remove('is-closing');
     overlay.removeAttribute('hidden');
+    overlay.classList.add('is-opening');
+    if (reducedMotion.matches) overlay.classList.remove('is-opening');
     openModal = overlay;
     document.body.style.overflow = 'hidden';
-    var closeBtn = overlay.querySelector('.modal-close');
+    var closeBtn = overlay.querySelector('.pb-panel__close');
     if (closeBtn) closeBtn.focus();
   }
 
@@ -144,11 +117,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var opener = closing._opener;
     openModal = null;
     document.body.style.overflow = '';
-    closing.classList.add('modal-closing');
-    setTimeout(function () {
+    closing.classList.remove('is-opening');
+    closing.classList.add('is-closing');
+    closing._hideTimer = setTimeout(function () {
       closing.setAttribute('hidden', '');
-      closing.classList.remove('modal-closing');
-    }, 200);
+      closing.classList.remove('is-closing');
+    }, reducedMotion.matches ? 0 : 150);
     if (opener) opener.focus();
   }
 
@@ -161,10 +135,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  document.querySelectorAll('.modal-overlay').forEach(function (overlay) {
-    overlay.querySelector('.modal-close').addEventListener('click', hideModal);
+  document.querySelectorAll('.pb-overlay').forEach(function (overlay) {
+    overlay.querySelector('.pb-panel__close').addEventListener('click', hideModal);
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) hideModal();
+    });
+    overlay.addEventListener('animationend', function (e) {
+      if (e.target === overlay) overlay.classList.remove('is-opening');
     });
   });
 
@@ -179,7 +156,11 @@ document.addEventListener('DOMContentLoaded', function () {
       if (focusable.length === 0) return;
       var first = focusable[0];
       var last = focusable[focusable.length - 1];
-      if (e.shiftKey) {
+      // Focus has left the panel (a click on its text drops focus to the body): bring it back in
+      if (!openModal.contains(document.activeElement)) {
+        e.preventDefault();
+        (e.shiftKey ? last : first).focus();
+      } else if (e.shiftKey) {
         if (document.activeElement === first) {
           e.preventDefault();
           last.focus();
