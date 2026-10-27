@@ -24,7 +24,9 @@
 @media print {
   .pb-topbar,
   .pb-skip,
-  #therapeutic-areas {
+  #therapeutic-areas,
+  #contact,
+  .pb-footer {
     display: none;
   }
 }
