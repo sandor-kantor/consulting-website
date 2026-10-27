@@ -52,56 +52,41 @@
   </head>
   <body class="pb body">
 
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-
-    <header id="header">
-      <!-- Header -->
-      <nav class="navbar" aria-label="Primary navigation">
-        <div class="nav-container">
-          <a href="#hero" class="nav-logo">
-            <img src="assets/images/pharmabrain-icon.png" alt="PharmaBrAIn" class="nav-logo-icon" />
-            <span class="nav-logo-text">PharmaBr<span class="logo-highlight">AI</span>n</span>
-          </a>
-          <ul class="nav-menu">
+    <a class="pb-skip" href="#main-content">Skip to main content</a>
+    <header class="pb-topbar">
+      <div class="pb-container pb-topbar__inner">
+        <a href="#hero"><img class="pb-topbar__logo" src="assets/images/pharmabrain-lockup-horizontal-navy.svg" alt="PharmaBrAIn" width="158" height="32"></a>
+        <nav aria-label="Primary navigation">
+          <button class="pb-menu-button" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+          <ul class="pb-nav label" id="primary-nav">
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="#somnolect">Somnolect</a></li>
             <li><a href="#publications">Publications</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
 
     <main id="main-content">
 
-    <section id="hero">
-      <!-- Real rodent EEG recording background -->
-      <div class="hero-bg-wave" aria-hidden="true">
-        <img class="hero-wave-img" src="assets/images/rat_EEG.png" alt="" />
-      </div>
-
-      <!-- Hero content -->
-      <div class="hero-content-wrapper">
-        <div class="hero-layout">
-          <div class="hero-content">
-            <p class="hero-eyebrow">Sandor Kantor, PhD</p>
-            <h1 class="hero-title">Electrophysiology<br>Consulting<br>Services</h1>
-            <p class="hero-description">Bridging preclinical and clinical development with 20+ years of expertise in neurophysiological biomarkers, pharmaco-EEG, and CNS drug discovery.</p>
-            <div class="hero-buttons">
-              <a href="#services" class="btn btn-primary">View Services</a>
-              <a href="#contact" class="btn btn-outline">Get in Touch</a>
-            </div>
-          </div>
-          <div class="hero-photo">
-            <img src="assets/images/pharmabrain-logo_white.png" alt="PharmaBrAIn — brain-circuit logo" />
+    <section id="hero" class="pb-hero pb-inverse">
+      <div class="pb-container pb-hero__grid">
+        <div>
+          <p class="eyebrow pb-eyebrow">Sandor Kantor, PhD</p>
+          <h1 class="display-xl pb-hero__title">Electrophysiology consulting services</h1>
+          <p class="lead pb-hero__lead">Bridging preclinical and clinical development with 20+ years of expertise in neurophysiological biomarkers, pharmaco-EEG, and CNS drug discovery.</p>
+          <div class="pb-actions">
+            <a class="pb-btn pb-btn--primary label" href="#services">View services</a>
+            <a class="pb-btn pb-btn--secondary label" href="#contact">Get in touch</a>
           </div>
         </div>
+        <img class="pb-hero__logo" src="assets/images/pharmabrain-lockup-stacked-white.svg" alt="PharmaBrAIn, your translational EEG partner for CNS drug development" width="340" height="304">
       </div>
+      <img class="pb-trace pb-trace--navy-ground" src="assets/images/eeg-band-cyan.png" alt="" width="1522" height="260">
     </section>
 
     <section id="about">

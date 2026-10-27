@@ -1,19 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const navToggle = document.querySelector('.nav-toggle');
-  const navMenu = document.querySelector('.nav-menu');
+  const menuButton = document.querySelector('.pb-menu-button');
+  const navMenu = document.getElementById('primary-nav');
 
-  if (!navToggle || !navMenu) return;
-
-  function closeMenu() {
-    navMenu.classList.remove('active');
-    navToggle.classList.remove('active');
-    navToggle.setAttribute('aria-expanded', 'false');
+  function setMenuOpen(isOpen) {
+    navMenu.classList.toggle('is-open', isOpen);
+    menuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   }
 
-  navToggle.addEventListener('click', function () {
-    const isOpen = navMenu.classList.toggle('active');
-    navToggle.classList.toggle('active', isOpen);
-    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  function closeMenu() {
+    setMenuOpen(false);
+  }
+
+  menuButton.addEventListener('click', function () {
+    setMenuOpen(!navMenu.classList.contains('is-open'));
   });
 
   navMenu.querySelectorAll('a').forEach(function (link) {
@@ -21,27 +20,24 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.addEventListener('click', function (event) {
-    if (!navMenu.classList.contains('active')) return;
-    if (!navMenu.contains(event.target) && !navToggle.contains(event.target)) {
+    if (!navMenu.classList.contains('is-open')) return;
+    if (!navMenu.contains(event.target) && !menuButton.contains(event.target)) {
       closeMenu();
     }
   });
 
-  // Navbar scroll shadow
-  const navbar = document.querySelector('.navbar');
-  let ticking = false;
+  // Escape closes the menu and returns focus to the menu button
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && navMenu.classList.contains('is-open')) {
+      closeMenu();
+      menuButton.focus();
+    }
+  });
 
-  if (navbar) {
-    window.addEventListener('scroll', function () {
-      if (!ticking) {
-        requestAnimationFrame(function () {
-          navbar.classList.toggle('navbar-scrolled', window.scrollY > 50);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
-  }
+  // Widening the window past the menu breakpoint (same query as components.css) closes the menu
+  window.matchMedia('(max-width: 768px)').addEventListener('change', function (event) {
+    if (!event.matches) closeMenu();
+  });
 
   // Active nav link highlighting via Intersection Observer
   const sections = document.querySelectorAll('section[id]');
@@ -50,9 +46,9 @@ document.addEventListener('DOMContentLoaded', function () {
   function setActiveLink(id) {
     navLinks.forEach(function (link) {
       if (link.getAttribute('href') === '#' + id) {
-        link.classList.add('active-link');
+        link.setAttribute('aria-current', 'true');
       } else {
-        link.classList.remove('active-link');
+        link.removeAttribute('aria-current');
       }
     });
   }

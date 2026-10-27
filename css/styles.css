@@ -15,3 +15,10 @@
     scroll-behavior: smooth;
   }
 }
+
+@media print {
+  .pb-topbar,
+  .pb-skip {
+    display: none;
+  }
+}
