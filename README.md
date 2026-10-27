@@ -1,6 +1,6 @@
 # PharmaBrAIn — Consulting Website
 
-Professional website for PharmaBrAIn, a translational neuroscience and AI consulting practice founded by Sandor Kantor, PhD. Specialising in neurophysiology, EEG biomarkers, and CNS drug discovery.
+Professional website for PharmaBrAIn, a translational neuroscience consulting practice for CNS drug development, founded by Sandor Kantor, PhD. Specialising in neurophysiology, EEG biomarkers, and CNS drug discovery.
 
 **Live site:** https://www.pharmabrain.co.uk
 
