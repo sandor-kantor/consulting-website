@@ -15,18 +15,82 @@
   white-space: nowrap;
 }
 
+/* Keyboard focus: the ring sits 4 px outside a control (2 px wide, 2 px out), so a control
+   scrolled into view by Tab stops this far from the top bar and the window's lower edge,
+   and the focused skip link drops just clear of the top of the window */
+.pb a,
+.pb button {
+  scroll-margin: var(--space-2);
+}
+
+.pb-skip:focus {
+  transform: translateY(var(--space-1));
+}
+
+/* Therapeutic areas band, above 768 px (below it components.css stacks the band):
+   the chips take the rest of the row beside the label and wrap there, so they never
+   drop below the label and leave its divider standing alone */
+@media (min-width: 769px) {
+  .pb-band .pb-chips {
+    flex: 1 1 0;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
   }
 }
 
+/* ============================================================
+   Print
+   Every ground white and all text in --text. Navigation, the
+   panels and the white logo artwork (never recoloured) are left off.
+   ============================================================ */
+
 @media print {
   .pb-topbar,
+  .pb-menu-button,
   .pb-skip,
+  .pb-hero__logo,
+  .pb-trace,
   #therapeutic-areas,
+  .pb-somnolect__logo,
   #contact,
-  .pb-footer {
+  .pb-footer,
+  .pb-overlay {
     display: none;
+  }
+
+  .pb,
+  .pb-section,
+  .pb-inverse,
+  .pb-btn {
+    background: var(--surface-000);
+  }
+
+  /* !important: components.css colours text per ground with two-class selectors */
+  .pb,
+  .pb * {
+    color: var(--text) !important;
+  }
+
+  /* The navy card loses its ground on paper, so a hairline keeps it a card */
+  .pb-somnolect {
+    border: 1px solid var(--border-subtle);
+  }
+
+  .pb-card,
+  .pb-case,
+  .pb-pub,
+  .pb-stats,
+  .pb-somnolect {
+    break-inside: avoid;
+  }
+
+  /* Addresses after external links only; in-page #anchors mean nothing on paper */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: smaller;
   }
 }
