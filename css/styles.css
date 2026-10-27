@@ -10,6 +10,11 @@
   margin: 0;
 }
 
+/* Keeps a citation such as "Sleep 32, 1127–34 (2009)" on one line */
+.nowrap {
+  white-space: nowrap;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;

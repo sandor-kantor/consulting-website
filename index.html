@@ -374,199 +374,170 @@
     <!-- Service Modals -->
 
     <!-- Modal 1: System Implementation & Technical Support -->
-    <div class="modal-overlay" id="modal-system-impl" role="dialog" aria-modal="true" aria-labelledby="modal-system-impl-title" hidden>
-      <div class="modal-dialog">
-        <button class="modal-close" aria-label="Close dialog">&times;</button>
-        <div class="modal-icon" aria-hidden="true">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="4" y="4" width="16" height="16" rx="2" />
-            <rect x="9" y="9" width="6" height="6" />
-            <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3" />
-          </svg>
+    <div class="pb-overlay pb-overlay--fixed" id="modal-system-impl" hidden>
+      <div class="pb-panel" role="dialog" aria-modal="true" aria-labelledby="modal-system-impl-title">
+        <button class="pb-panel__close" type="button" aria-label="Close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <p class="eyebrow pb-eyebrow">01 · Technical platforms &amp; systems expertise</p>
+        <h2 class="h2 pb-panel__title" id="modal-system-impl-title">System implementation &amp; technical support</h2>
+        <div class="pb-panel__section">
+          <h3 class="eyebrow pb-eyebrow pb-eyebrow--muted">Wireless / telemetry systems</h3>
+          <p class="body-strong">DSI PhysioTel implantable telemetry</p>
+          <ul class="pb-list small">
+            <li>Rats &amp; mice: EEG/EMG, locomotor activity (LMA), body temperature (Tb)</li>
+            <li>Beagles: EEG/EMG, LMA, Tb, ECG, left ventricular pressure (LVP), arterial pressure (AP)</li>
+          </ul>
+          <p class="body-strong">TSE Neurologger</p>
+          <ul class="pb-list small">
+            <li>EEG/EMG data logging in freely moving mice</li>
+          </ul>
         </div>
-        <p class="modal-subtitle">Technical Platforms &amp; Systems Expertise</p>
-        <h2 class="modal-title" id="modal-system-impl-title">System Implementation &amp; Technical Support</h2>
-        <div class="modal-body">
-          <div class="modal-section">
-            <h3 class="modal-section-title">Wireless / Telemetry Systems</h3>
-            <p><strong>DSI PhysioTel Implantable Telemetry</strong></p>
-            <ul>
-              <li>Rats &amp; mice: EEG/EMG, locomotor activity (LMA), body temperature (Tb)</li>
-              <li>Beagles: EEG/EMG, LMA, Tb, ECG, left ventricular pressure (LVP), arterial pressure (AP)</li>
-            </ul>
-            <p style="margin-top:12px"><strong>TSE Neurologger</strong></p>
-            <ul>
-              <li>EEG/EMG data logging in freely moving mice</li>
-            </ul>
-          </div>
-          <div class="modal-section">
-            <h3 class="modal-section-title">Surgery Optimisation</h3>
-            <ul>
-              <li>Fully aseptic surgical techniques</li>
-              <li>Epidural EEG and EMG electrode placement</li>
-              <li>Stereotaxic hippocampal depth electrode placement</li>
-              <li>Intraperitoneal telemetry transmitter implantation</li>
-              <li>Signal quality improvement and troubleshooting</li>
-            </ul>
-          </div>
-          <div class="modal-section">
-            <p>Staff training and technical workshops available on request.</p>
-          </div>
-          <!-- IMAGE: Pending IP clearance — add telemetry-setup.jpg here when approved -->
-          <div class="modal-section">
-            <div class="modal-img-grid">
-              <figure>
-                <img class="modal-img" src="assets/images/hypnograms-wt-atx3.jpg" alt="24-hour EEG hypnograms comparing sleep-wake architecture in wild-type versus Ataxin-3 transgenic rats" />
-                <figcaption class="modal-img-caption">24-h hypnograms: WT vs. Atx-3 rats — DSI PhysioTel telemetry</figcaption>
-              </figure>
-              <figure>
-                <img class="modal-img" src="assets/images/electrode-surgery.jpg" alt="Aseptic epidural EEG electrode placement surgery in a rodent model using stereotaxic equipment" />
-                <figcaption class="modal-img-caption">Epidural electrode placement — fully aseptic surgical technique</figcaption>
-              </figure>
-            </div>
+        <div class="pb-panel__section">
+          <h3 class="eyebrow pb-eyebrow pb-eyebrow--muted">Surgery optimisation</h3>
+          <ul class="pb-list small">
+            <li>Fully aseptic surgical techniques</li>
+            <li>Epidural EEG and EMG electrode placement</li>
+            <li>Stereotaxic hippocampal depth electrode placement</li>
+            <li>Intraperitoneal telemetry transmitter implantation</li>
+            <li>Signal quality improvement and troubleshooting</li>
+          </ul>
+          <p class="body">Staff training and technical workshops available on request.</p>
+        </div>
+        <!-- IMAGE: Pending IP clearance — add telemetry-setup.jpg here when approved -->
+        <div class="pb-panel__section">
+          <div class="pb-figs">
+            <figure class="pb-figure">
+              <img src="assets/images/hypnograms-wt-atx3.jpg" alt="24-hour EEG hypnograms comparing sleep-wake architecture in wild-type versus Ataxin-3 transgenic rats" width="1600" height="1003" loading="lazy">
+              <figcaption class="caption">24-h hypnograms: WT vs. Atx-3 rats, DSI PhysioTel telemetry</figcaption>
+            </figure>
+            <figure class="pb-figure">
+              <img src="assets/images/electrode-surgery-duotone.jpg" alt="Aseptic epidural EEG electrode placement surgery in a rodent, shown as a navy duotone" width="755" height="472" loading="lazy">
+              <figcaption class="caption">Epidural electrode placement, fully aseptic surgical technique</figcaption>
+            </figure>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Modal 2: Pharmaco-EEG Study Design -->
-    <div class="modal-overlay" id="modal-pharmaco-eeg" role="dialog" aria-modal="true" aria-labelledby="modal-pharmaco-eeg-title" hidden>
-      <div class="modal-dialog">
-        <button class="modal-close" aria-label="Close dialog">&times;</button>
-        <div class="modal-icon" aria-hidden="true">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="8" y="2" width="8" height="4" rx="1" />
-            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-            <line x1="9" y1="12" x2="15" y2="12" />
-            <line x1="9" y1="16" x2="13" y2="16" />
-          </svg>
+    <div class="pb-overlay pb-overlay--fixed" id="modal-pharmaco-eeg" hidden>
+      <div class="pb-panel" role="dialog" aria-modal="true" aria-labelledby="modal-pharmaco-eeg-title">
+        <button class="pb-panel__close" type="button" aria-label="Close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <p class="eyebrow pb-eyebrow">02 · Study design &amp; support</p>
+        <h2 class="h2 pb-panel__title" id="modal-pharmaco-eeg-title">Pharmaco-EEG study design</h2>
+        <div class="pb-panel__section">
+          <h3 class="eyebrow pb-eyebrow pb-eyebrow--muted">Study planning services</h3>
+          <ul class="pb-list small">
+            <li>Protocol development and critical review</li>
+            <li>Endpoint selection and scientific justification</li>
+            <li>Power analysis and sample size calculations</li>
+            <li>IND-enabling study design support</li>
+            <li>Scientific writing and report review</li>
+          </ul>
         </div>
-        <p class="modal-subtitle">Study Design &amp; Support</p>
-        <h2 class="modal-title" id="modal-pharmaco-eeg-title">Pharmaco-EEG Study Design</h2>
-        <div class="modal-body">
-          <div class="modal-section">
-            <h3 class="modal-section-title">Study Planning Services</h3>
-            <ul>
-              <li>Protocol development and critical review</li>
-              <li>Endpoint selection and scientific justification</li>
-              <li>Power analysis and sample size calculations</li>
-              <li>IND-enabling study design support</li>
-              <li>Scientific writing and report review</li>
-            </ul>
-          </div>
-          <div class="modal-section">
-            <h3 class="modal-section-title">Study Types Supported</h3>
-            <ul>
-              <li>Circadian rhythm studies in mice (wild-type and transgenic)</li>
-              <li>Sleep-wake architecture profiling in rodents and dogs</li>
-              <li>Pharmaco-EEG dose-response studies in rodents and dogs</li>
-              <li>Event-related potential (MMN) studies in rats</li>
-              <li>Cardiovascular studies in dogs: ECG, LVP, arterial pressure</li>
-              <li>Behavioural assessment in rodents</li>
-            </ul>
-          </div>
-          <div class="modal-section">
-            <figure style="margin:0">
-              <img class="modal-img" src="assets/images/icon-pharmaco-eeg.jpg" alt="Pharmaco-EEG study overview showing electrode placement, EEG frequency band decomposition, and dose-response analysis" />
-            </figure>
-          </div>
+        <div class="pb-panel__section">
+          <h3 class="eyebrow pb-eyebrow pb-eyebrow--muted">Study types supported</h3>
+          <ul class="pb-list small">
+            <li>Circadian rhythm studies in mice (wild-type and transgenic)</li>
+            <li>Sleep-wake architecture profiling in rodents and dogs</li>
+            <li>Pharmaco-EEG dose-response studies in rodents and dogs</li>
+            <li>Event-related potential (MMN) studies in rats</li>
+            <li>Cardiovascular studies in dogs: ECG, LVP, arterial pressure</li>
+            <li>Behavioural assessment in rodents</li>
+          </ul>
+        </div>
+        <div class="pb-panel__section">
+          <figure class="pb-figure" aria-hidden="true">
+            <img src="assets/images/icon-pharmaco-eeg-duotone.jpg" alt="" width="1200" height="750" loading="lazy">
+          </figure>
         </div>
       </div>
     </div>
 
     <!-- Modal 3: Data Analysis & Interpretation -->
-    <div class="modal-overlay" id="modal-data-analysis" role="dialog" aria-modal="true" aria-labelledby="modal-data-analysis-title" hidden>
-      <div class="modal-dialog">
-        <button class="modal-close" aria-label="Close dialog">&times;</button>
-        <div class="modal-icon" aria-hidden="true">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="20" x2="18" y2="10" />
-            <line x1="12" y1="20" x2="12" y2="4" />
-            <line x1="6" y1="20" x2="6" y2="14" />
-            <line x1="2" y1="20" x2="22" y2="20" />
-          </svg>
+    <div class="pb-overlay pb-overlay--fixed" id="modal-data-analysis" hidden>
+      <div class="pb-panel" role="dialog" aria-modal="true" aria-labelledby="modal-data-analysis-title">
+        <button class="pb-panel__close" type="button" aria-label="Close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <p class="eyebrow pb-eyebrow">03 · Analysis platforms &amp; methods</p>
+        <h2 class="h2 pb-panel__title" id="modal-data-analysis-title">Data analysis &amp; interpretation</h2>
+        <div class="pb-panel__section">
+          <h3 class="eyebrow pb-eyebrow pb-eyebrow--muted">Analysis methods</h3>
+          <ul class="pb-list small">
+            <li>Manual and semi-automated sleep-wake scoring</li>
+            <li>Power spectral density (PSD) analysis</li>
+            <li>Event-related potential (ERP) assessment</li>
+            <li>Statistical modelling and regulatory reporting</li>
+            <li>Neurophysiological biomarker identification</li>
+            <li>Publication-ready visualisations</li>
+          </ul>
         </div>
-        <p class="modal-subtitle">Analysis Platforms &amp; Methods</p>
-        <h2 class="modal-title" id="modal-data-analysis-title">Data Analysis &amp; Interpretation</h2>
-        <div class="modal-body">
-          <div class="modal-section">
-            <h3 class="modal-section-title">Analysis Methods</h3>
-            <ul>
-              <li>Manual and semi-automated sleep-wake scoring</li>
-              <li>Power spectral density (PSD) analysis</li>
-              <li>Event-related potential (ERP) assessment</li>
-              <li>Statistical modelling and regulatory reporting</li>
-              <li>Neurophysiological biomarker identification</li>
-              <li>Publication-ready visualisations</li>
-            </ul>
-          </div>
-          <div class="modal-section">
-            <h3 class="modal-section-title">Software Platforms</h3>
-            <ul class="modal-pills">
-              <li>SleepSign for Animals (Kissei Comtec)</li>
-              <li>Spike2 (CED)</li>
-              <li>NOTOCORD-hem (Instem)</li>
-              <li>Ponemah (DSI)</li>
-              <li>Python — SciPy, NumPy, Pandas, Matplotlib</li>
-            </ul>
-          </div>
-          <!-- IMAGE: Pending IP clearance — add data-analysis-screenshot.jpg here when approved -->
-          <div class="modal-section">
-            <figure style="margin:0">
-              <img class="modal-img" src="assets/images/data-analysis-dashboard.jpg" alt="EEG data analysis software platforms — spectral analysis and sleep scoring dashboard" />
-              <figcaption class="modal-img-caption">EEG data analysis dashboard — spectral and vigilance state scoring</figcaption>
-            </figure>
-          </div>
-          <div class="modal-pubs-footer">
-            Key publications: Kantor S et al. <em>Behav. Brain Res.</em> 449, 114473 (2023) &nbsp;·&nbsp; <em>Sleep</em> 36, 1129–38 (2013) &nbsp;·&nbsp; <em>Sleep</em> 32, 1127–34 (2009) &nbsp;·&nbsp; <em>Brain</em> 136, 2147–58 (2013)
-          </div>
+        <div class="pb-panel__section">
+          <h3 class="eyebrow pb-eyebrow pb-eyebrow--muted">Software platforms</h3>
+          <ul class="pb-pills">
+            <li class="small pb-pill">SleepSign for Animals (Kissei Comtec)</li>
+            <li class="small pb-pill">Spike2 (CED)</li>
+            <li class="small pb-pill">NOTOCORD-hem (Instem)</li>
+            <li class="small pb-pill">Ponemah (DSI)</li>
+            <li class="small pb-pill">Python: SciPy, NumPy, Pandas, Matplotlib</li>
+          </ul>
+        </div>
+        <!-- IMAGE: Pending IP clearance — add data-analysis-screenshot.jpg here when approved -->
+        <div class="pb-panel__section">
+          <figure class="pb-figure pb-figure--framed">
+            <img src="assets/images/somnolect-viewer-light.webp" alt="The Somnolect sleep scoring viewer, showing a recording's EEG and EMG with the stage of each epoch, the hypnogram, the confidence level, trends and the EEG power spectrum." width="1798" height="1136" loading="lazy">
+            <figcaption class="caption">Somnolect, automated sleep staging and EEG analysis service: <a class="pb-link" href="https://somnolect.co.uk/" target="_blank" rel="noopener noreferrer">somnolect.co.uk</a></figcaption>
+          </figure>
+        </div>
+        <div class="pb-panel__section">
+          <h3 class="eyebrow pb-eyebrow pb-eyebrow--muted">Key publications</h3>
+          <p class="small pb-panel__refs">Kantor S et al. <span class="nowrap"><em>Behav. Brain Res.</em> 449, 114473 (2023)</span> · <span class="nowrap"><em>Sleep</em> 36, 1129–38 (2013)</span> · <span class="nowrap"><em>Sleep</em> 32, 1127–34 (2009)</span> · <span class="nowrap"><em>Brain</em> 136, 2147–58 (2013)</span></p>
         </div>
       </div>
     </div>
 
     <!-- Modal 4: Translational Biomarker Strategy -->
-    <div class="modal-overlay" id="modal-translational" role="dialog" aria-modal="true" aria-labelledby="modal-translational-title" hidden>
-      <div class="modal-dialog">
-        <button class="modal-close" aria-label="Close dialog">&times;</button>
-        <div class="modal-icon" aria-hidden="true">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="2" y1="12" x2="22" y2="12" />
-            <polyline points="15 5 22 12 15 19" />
-            <circle cx="6" cy="12" r="3" />
-          </svg>
+    <div class="pb-overlay pb-overlay--fixed" id="modal-translational" hidden>
+      <div class="pb-panel" role="dialog" aria-modal="true" aria-labelledby="modal-translational-title">
+        <button class="pb-panel__close" type="button" aria-label="Close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <p class="eyebrow pb-eyebrow">04 · Bridging preclinical and clinical development</p>
+        <h2 class="h2 pb-panel__title" id="modal-translational-title">Translational biomarker strategy</h2>
+        <p class="body pb-panel__intro">Changes in rodent sleep, EEG, and event-related potentials (ERP) directly mirror human responses to CNS-active compounds. This translational consistency makes EEG a powerful pharmacodynamic tool that enables quantitative, cross-species validation.</p>
+        <div class="pb-panel__section">
+          <figure class="pb-figure">
+            <img src="assets/images/translational-eeg-species-16x10.jpg" alt="" width="1024" height="640" loading="lazy">
+            <figcaption class="caption">EEG biomarkers conserved across species: the basis of translational pharmacodynamics</figcaption>
+          </figure>
         </div>
-        <p class="modal-subtitle">Bridging Preclinical and Clinical Development</p>
-        <h2 class="modal-title" id="modal-translational-title">Translational Biomarker Strategy</h2>
-        <div class="modal-body">
-          <p class="modal-opening">Changes in rodent sleep, EEG, and event-related potentials (ERP) directly mirror human responses to CNS-active compounds. This translational consistency makes EEG a powerful pharmacodynamic tool that enables quantitative, cross-species validation.</p>
-          <div class="modal-section">
-            <figure style="margin:0 0 4px">
-              <img class="modal-img" src="assets/images/translational-eeg-species.jpg" alt="Cross-species EEG translational framework illustrating equivalent sleep and EEG biomarkers from mouse through rat, dog, non-human primate, and human" />
-              <figcaption class="modal-img-caption">EEG biomarkers conserved across species — the basis of translational pharmacodynamics</figcaption>
-            </figure>
-          </div>
-          <div class="modal-section">
-            <h3 class="modal-section-title">EEG Enables Critical Decision-Making</h3>
-            <ul>
-              <li>Supporting early go/no-go decisions with translatable endpoints</li>
-              <li>De-risking novel neurotherapeutics through cross-species validation</li>
-              <li>Aligning preclinical results with clinical trial endpoints</li>
-              <li>Providing quantitative biomarkers for regulatory submissions</li>
-            </ul>
-          </div>
-          <div class="modal-columns">
-            <div class="modal-section">
-              <h3 class="modal-section-title">Pharmaco-EEG Applications</h3>
-              <ul>
+        <div class="pb-panel__section">
+          <h3 class="eyebrow pb-eyebrow pb-eyebrow--muted">EEG enables critical decision-making</h3>
+          <ul class="pb-list small">
+            <li>Supporting early go/no-go decisions with translatable endpoints</li>
+            <li>De-risking novel neurotherapeutics through cross-species validation</li>
+            <li>Aligning preclinical results with clinical trial endpoints</li>
+            <li>Providing quantitative biomarkers for regulatory submissions</li>
+          </ul>
+        </div>
+        <div class="pb-panel__section">
+          <div class="pb-cols">
+            <div>
+              <h3 class="eyebrow pb-eyebrow pb-eyebrow--muted">Pharmaco-EEG applications</h3>
+              <ul class="pb-list small">
                 <li>CNS target engagement biomarkers</li>
                 <li>Target engagement validation</li>
                 <li>Dose-response relationships</li>
                 <li>Time-course of drug effects</li>
               </ul>
             </div>
-            <div class="modal-section">
-              <h3 class="modal-section-title">Translational Endpoints</h3>
-              <ul>
+            <div>
+              <h3 class="eyebrow pb-eyebrow pb-eyebrow--muted">Translational endpoints</h3>
+              <ul class="pb-list small">
                 <li>Cross-species biomarker validation</li>
                 <li>Preclinical-to-clinical bridging</li>
                 <li>Regulatory-compliant endpoints</li>
@@ -578,58 +549,50 @@
     </div>
 
     <!-- Modal 5: Disease Model Expertise -->
-    <div class="modal-overlay" id="modal-disease-models" role="dialog" aria-modal="true" aria-labelledby="modal-disease-models-title" hidden>
-      <div class="modal-dialog">
-        <button class="modal-close" aria-label="Close dialog">&times;</button>
-        <div class="modal-icon" aria-hidden="true">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="5" r="2" />
-            <circle cx="5" cy="19" r="2" />
-            <circle cx="19" cy="19" r="2" />
-            <line x1="12" y1="7" x2="12" y2="14" />
-            <line x1="12" y1="14" x2="6" y2="17" />
-            <line x1="12" y1="14" x2="18" y2="17" />
-          </svg>
-        </div>
-        <p class="modal-subtitle">Disease Models &amp; Applications</p>
-        <h2 class="modal-title" id="modal-disease-models-title">Disease Model Expertise</h2>
-        <div class="modal-body">
-          <div class="modal-sub-cards">
-            <div class="modal-sub-card modal-sub-card--sleep">
-              <img class="modal-sub-card-img" src="assets/images/icon-sleep-circadian.jpg" alt="Hypnogram showing sleep-wake cycle architecture — NREM, REM, and wakefulness across 24 hours" />
-              <h3 class="modal-sub-card-title">Sleep &amp; Circadian Disorders</h3>
-              <ul>
+    <div class="pb-overlay pb-overlay--fixed" id="modal-disease-models" hidden>
+      <div class="pb-panel" role="dialog" aria-modal="true" aria-labelledby="modal-disease-models-title">
+        <button class="pb-panel__close" type="button" aria-label="Close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <p class="eyebrow pb-eyebrow">05 · Disease models &amp; applications</p>
+        <h2 class="h2 pb-panel__title" id="modal-disease-models-title">Disease model expertise</h2>
+        <div class="pb-panel__section">
+          <div class="pb-areas">
+            <div class="pb-area">
+              <img class="pb-area__img" src="assets/images/icon-sleep-circadian-duotone.jpg" alt="" width="800" height="500" loading="lazy">
+              <h3 class="body-strong pb-area__title">Sleep &amp; circadian disorders</h3>
+              <ul class="pb-list small">
                 <li>Circadian rhythm assessment</li>
                 <li>Sleep-wake architecture profiling</li>
                 <li>Sleep latency and fragmentation analysis</li>
                 <li>Sedative / hypnotic / wake-promoting property assessment</li>
               </ul>
             </div>
-            <div class="modal-sub-card modal-sub-card--neuropsych">
-              <img class="modal-sub-card-img" src="assets/images/icon-neuropsychiatric.jpg" alt="EEG mismatch negativity (MMN) waveform — auditory oddball paradigm for schizophrenia and psychiatric drug assessment" />
-              <h3 class="modal-sub-card-title">Neuropsychiatric Models</h3>
-              <ul>
+            <div class="pb-area">
+              <img class="pb-area__img" src="assets/images/icon-neuropsychiatric-duotone.jpg" alt="" width="800" height="500" loading="lazy">
+              <h3 class="body-strong pb-area__title">Neuropsychiatric models</h3>
+              <ul class="pb-list small">
                 <li>Abnormal sleep-wake pattern characterisation</li>
                 <li>Pharmaco-EEG for CNS compounds</li>
-                <li>MMN response — Auditory Oddball Paradigm</li>
+                <li>MMN response: auditory oddball paradigm</li>
                 <li>PCP-challenge &amp; other NMDAr antagonist models</li>
               </ul>
             </div>
-            <div class="modal-sub-card modal-sub-card--psychedelic">
-              <img class="modal-sub-card-img" src="assets/images/icon-psychedelic.jpg" alt="EEG gamma power spectrogram showing enhanced high-frequency oscillations following psychedelic compound administration" />
-              <h3 class="modal-sub-card-title">Psychedelic Research</h3>
-              <ul>
+            <div class="pb-area">
+              <img class="pb-area__img" src="assets/images/icon-psychedelic-duotone.jpg" alt="" width="800" height="500" loading="lazy">
+              <h3 class="body-strong pb-area__title">Psychedelic research</h3>
+              <ul class="pb-list small">
                 <li>EEG gamma power enhancement</li>
                 <li>REM sleep suppression efficacy</li>
                 <li>Spectral coherence changes</li>
                 <li>Dose-response profiling</li>
               </ul>
-              <div class="modal-note">Experience with psilocybin, ibogaine, and other neuroplastogens.</div>
+              <p class="small pb-area__note">Experience with psilocybin, ibogaine, and other neuroplastogens.</p>
             </div>
-            <div class="modal-sub-card modal-sub-card--epilepsy">
-              <img class="modal-sub-card-img" src="assets/images/icon-epilepsy.jpg" alt="EEG recording showing interictal spike detection and seizure quantification in a rodent epilepsy model" />
-              <h3 class="modal-sub-card-title">Epilepsy &amp; Seizure Models</h3>
-              <ul>
+            <div class="pb-area">
+              <img class="pb-area__img" src="assets/images/icon-epilepsy-duotone.jpg" alt="" width="800" height="500" loading="lazy">
+              <h3 class="body-strong pb-area__title">Epilepsy &amp; seizure models</h3>
+              <ul class="pb-list small">
                 <li>Seizure detection and quantification</li>
                 <li>Abnormal EEG pattern detection</li>
                 <li>Anticonvulsant efficacy testing</li>
@@ -641,41 +604,33 @@
     </div>
 
     <!-- Modal 6: Ongoing Scientific Advisory -->
-    <div class="modal-overlay" id="modal-advisory" role="dialog" aria-modal="true" aria-labelledby="modal-advisory-title" hidden>
-      <div class="modal-dialog">
-        <button class="modal-close" aria-label="Close dialog">&times;</button>
-        <div class="modal-icon" aria-hidden="true">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
-            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z" />
-            <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
-          </svg>
+    <div class="pb-overlay pb-overlay--fixed" id="modal-advisory" hidden>
+      <div class="pb-panel" role="dialog" aria-modal="true" aria-labelledby="modal-advisory-title">
+        <button class="pb-panel__close" type="button" aria-label="Close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <p class="eyebrow pb-eyebrow">06 · Ongoing support services</p>
+        <h2 class="h2 pb-panel__title" id="modal-advisory-title">Ongoing scientific advisory</h2>
+        <div class="pb-panel__section">
+          <h3 class="eyebrow pb-eyebrow pb-eyebrow--muted">Support services</h3>
+          <ul class="pb-list small">
+            <li>Technical advisory and troubleshooting</li>
+            <li>Data interpretation for regulatory reports</li>
+            <li>Scientific writing and manuscript review</li>
+            <li>Training and knowledge transfer</li>
+            <li>CRO-quality documentation standards</li>
+          </ul>
         </div>
-        <p class="modal-subtitle">Ongoing Support Services</p>
-        <h2 class="modal-title" id="modal-advisory-title">Ongoing Scientific Advisory</h2>
-        <div class="modal-body">
-          <div class="modal-section">
-            <h3 class="modal-section-title">Support Services</h3>
-            <ul>
-              <li>Technical advisory and troubleshooting</li>
-              <li>Data interpretation for regulatory reports</li>
-              <li>Scientific writing and manuscript review</li>
-              <li>Training and knowledge transfer</li>
-              <li>CRO-quality documentation standards</li>
-            </ul>
-          </div>
-          <div class="modal-bg-card">
-            <strong>Global CRO experience</strong> (Transpharmation Ltd) — multi-site study coordination, regulatory standards compliance, IND-enabling study support, and a strong academic research foundation.
-          </div>
-          <div class="modal-bg-card">
-            20+ peer-reviewed publications in high-impact journals including <em>Brain</em>, <em>Sleep</em>, and <em>Neurotherapeutics</em>.
-          </div>
-          <div class="modal-section">
-            <figure style="margin:0">
-              <img class="modal-img" src="assets/images/lab-setup.jpg" alt="Neurophysiology recording laboratory showing telemetry receiver arrays, monitoring workstations, and signal acquisition hardware" />
-              <figcaption class="modal-img-caption">State-of-the-art neurophysiology recording facility — EEG acquisition infrastructure</figcaption>
-            </figure>
-          </div>
+        <div class="pb-panel__section">
+          <h3 class="eyebrow pb-eyebrow pb-eyebrow--muted">Background</h3>
+          <p class="body"><strong>Global CRO experience</strong> (Transpharmation Ltd): multi-site study coordination, regulatory standards compliance, IND-enabling study support, and a strong academic research foundation.</p>
+          <p class="body">20+ peer-reviewed publications in high-impact journals including <em>Brain</em>, <em>Sleep</em>, and <em>Neurotherapeutics</em>.</p>
+        </div>
+        <div class="pb-panel__section">
+          <figure class="pb-figure">
+            <img src="assets/images/lab-setup-16x10.jpg" alt="An EEG recording laboratory: amplifier units beside a rack of recording cages" width="643" height="402" loading="lazy">
+            <figcaption class="caption">Neurophysiology recording laboratory: amplifiers and recording cages</figcaption>
+          </figure>
         </div>
       </div>
     </div>

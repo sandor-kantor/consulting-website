@@ -93,13 +93,21 @@ document.addEventListener('DOMContentLoaded', function () {
   // Service card modals
   var openModal = null;
 
+  // components.css switches the fade off under reduced motion, so no animationend fires then
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
   function showModal(id) {
     var overlay = document.getElementById(id);
     if (!overlay) return;
+    // Reopened during its closing fade: cancel the pending hide
+    clearTimeout(overlay._hideTimer);
+    overlay.classList.remove('is-closing');
     overlay.removeAttribute('hidden');
+    overlay.classList.add('is-opening');
+    if (reducedMotion.matches) overlay.classList.remove('is-opening');
     openModal = overlay;
     document.body.style.overflow = 'hidden';
-    var closeBtn = overlay.querySelector('.modal-close');
+    var closeBtn = overlay.querySelector('.pb-panel__close');
     if (closeBtn) closeBtn.focus();
   }
 
@@ -109,11 +117,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var opener = closing._opener;
     openModal = null;
     document.body.style.overflow = '';
-    closing.classList.add('modal-closing');
-    setTimeout(function () {
+    closing.classList.remove('is-opening');
+    closing.classList.add('is-closing');
+    closing._hideTimer = setTimeout(function () {
       closing.setAttribute('hidden', '');
-      closing.classList.remove('modal-closing');
-    }, 200);
+      closing.classList.remove('is-closing');
+    }, reducedMotion.matches ? 0 : 150);
     if (opener) opener.focus();
   }
 
@@ -126,10 +135,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  document.querySelectorAll('.modal-overlay').forEach(function (overlay) {
-    overlay.querySelector('.modal-close').addEventListener('click', hideModal);
+  document.querySelectorAll('.pb-overlay').forEach(function (overlay) {
+    overlay.querySelector('.pb-panel__close').addEventListener('click', hideModal);
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) hideModal();
+    });
+    overlay.addEventListener('animationend', function (e) {
+      if (e.target === overlay) overlay.classList.remove('is-opening');
     });
   });
 
@@ -144,7 +156,11 @@ document.addEventListener('DOMContentLoaded', function () {
       if (focusable.length === 0) return;
       var first = focusable[0];
       var last = focusable[focusable.length - 1];
-      if (e.shiftKey) {
+      // Focus has left the panel (a click on its text drops focus to the body): bring it back in
+      if (!openModal.contains(document.activeElement)) {
+        e.preventDefault();
+        (e.shiftKey ? last : first).focus();
+      } else if (e.shiftKey) {
         if (document.activeElement === first) {
           e.preventDefault();
           last.focus();
