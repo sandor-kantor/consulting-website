@@ -18,7 +18,8 @@
 
 @media print {
   .pb-topbar,
-  .pb-skip {
+  .pb-skip,
+  #therapeutic-areas {
     display: none;
   }
 }
